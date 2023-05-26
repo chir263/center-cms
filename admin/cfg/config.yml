@@ -8,7 +8,7 @@ collections:
   - name: "Experiment"
     label: "test-exp-1"
     folder: "/experiment"
-    create: true
+    create: false
     slug: "experiment"
     delete: false
     fields: 
