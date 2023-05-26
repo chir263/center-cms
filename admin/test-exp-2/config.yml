@@ -1,0 +1,17 @@
+media_folder: "experiment/images"
+backend:
+  name: github
+  repo: chir263/test-exp-2
+  branch: master
+
+collections:
+  - name: "Experiment"
+    label: "test-exp-2"
+    folder: "/experiment"
+    create: false
+    slug: "experiment"
+    delete: false
+    fields: 
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+        
