@@ -6,7 +6,7 @@ backend:
 
 collections:
   - name: "Experiment"
-    label: "Experiment"
+    label: "test-exp-1"
     folder: "/experiment"
     create: true
     slug: "experiment"
