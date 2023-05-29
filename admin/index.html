@@ -9,7 +9,7 @@
 
     <script>
       var para = new URLSearchParams(window.location.search);
-      const ACCOUNT_NAME = "chir263";
+      const ACCOUNT_NAME = para.get("acc_name");
       const REPO_NAME = para.get("repo");
       let CMS_CONFIG = {
         backend: {
@@ -38,9 +38,7 @@
   <body>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
-      // window.onload = function () {
       CMS.init({ config: CMS_CONFIG });
-      // };
     </script>
   </body>
 </html>

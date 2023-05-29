@@ -7,14 +7,29 @@
   </head>
 
   <body>
+    <form id="myForm">
+      <label for="nameInput">Repository:</label>
+      <input
+        type="text"
+        id="nameInput"
+        name="nameInput"
+        value="test-exp-1"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+
     <script>
-      function load(url) {
-        var para = new URLSearchParams();
-        para.append("repo", url);
-        window.location.href = `/admin?` + para.toString();
-      }
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var name = document.getElementById("nameInput").value;
+          var para = new URLSearchParams();
+          para.append("repo", name);
+          para.append("acc_name", "chir263");
+          window.location.href = `/admin?` + para.toString();
+        });
     </script>
-    <button onclick="load('test-exp-1')">Edit test-exp-1</button>
-    <button onclick="load('test-exp-2')">Edit test-exp-2</button>
   </body>
 </html>
