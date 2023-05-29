@@ -15,6 +15,7 @@ anchorTag.addEventListener("click", (event) => {
     async function (error, data) {
       if (error) {
         outputToken.innerText = "Error Authenticating with GitHub: " + error;
+        console.log("I am here");
       } else {
         outputToken.innerText =
           "Authenticated with GitHub. Access Token: " + data.token;
