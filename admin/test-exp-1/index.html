@@ -8,17 +8,19 @@
     <script src="https://unpkg.com/netlify-auth-providers"></script>
 
     <script>
+      const ACCOUNT_NAME = "chir263";
+      const REPO_NAME = "test-exp-1";
       let CMS_CONFIG = {
         backend: {
           name: "github",
-          repo: "chir263/test-exp-1",
+          repo: `${ACCOUNT_NAME}/${REPO_NAME}`,
           branch: "master",
         },
         media_folder: "experiment/images",
         collections: [
           {
             name: "Experiment",
-            label: "test-exp-1",
+            label: REPO_NAME,
             folder: "/experiment",
             create: false,
             slug: "experiment",
@@ -32,16 +34,12 @@
       };
     </script>
   </head>
-  <!-- https://decapcms.org/docs/configuration-options/
-    https://docs.netlify.com/visitor-access/oauth-provider-tokens/#using-an-authentication-provider
--->
   <body>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
       window.onload = function () {
         CMS.init({ config: CMS_CONFIG });
       };
-      console.log(window.CMS_CONFIG);
     </script>
   </body>
 </html>
