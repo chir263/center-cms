@@ -9,7 +9,9 @@
   <body>
     <script>
       function load(url) {
-        window.location.href = `/admin/${url}`;
+        var para = new URLSearchParams();
+        para.append("repo", url);
+        window.location.href = `/admin?` + para.toString();
       }
     </script>
     <button onclick="load('test-exp-1')">Edit test-exp-1</button>
