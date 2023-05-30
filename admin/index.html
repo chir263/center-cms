@@ -72,5 +72,15 @@
     <script>
       CMS.init({ config: CMS_CONFIG });
     </script>
+
+    <script>
+      var parentDiv = document.querySelector('[id*="AppHeaderContent"]');
+      var newDiv = document.createElement("div");
+      newDiv.innerHTML = "<p>This is the new div content</p>";
+
+      var navbar = parentDiv.querySelector("nav");
+
+      navbar.insertAdjacentElement("afterend", newDiv);
+    </script>
   </body>
 </html>
