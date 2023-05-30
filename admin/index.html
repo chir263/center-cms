@@ -19,9 +19,17 @@
           name: "github",
           repo: `${ACCOUNT_NAME}/${REPO_NAME}`,
           branch: "master",
+          commit_messages: {
+            create: "Create {{collection}} “{{slug}}”",
+            update: "Update {{collection}} “{{slug}}”",
+            delete: "Delete {{collection}} “{{slug}}”",
+            uploadMedia: "Upload “{{path}}”",
+            deleteMedia: "Delete “{{path}}”",
+            openAuthoring: "{{message}}",
+          },
         },
         media_folder: "experiment/images",
-        // load_config_file: false
+
         collections: [
           {
             name: "Experiment",
