@@ -59,6 +59,12 @@
       #myBtn:hover {
         background-color: #555;
       }
+
+      .user_name {
+        font-size: 18px;
+        color: #2d3e3f;
+        padding: 5px;
+      }
     </style>
     <script>
       function back_to_home() {
@@ -75,34 +81,21 @@
 
     <script>
       var targetNode = document.body;
-
-      // Create a new mutation observer instance
       var observer = new MutationObserver(function (mutationsList, observer) {
-        // Check if the parent div has been created
         var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
         if (parentDiv) {
-          // Disconnect the observer since the parent div is now available
           observer.disconnect();
-
-          // Create the new div element to be appended
           var newDiv = document.createElement("div");
-          newDiv.innerHTML = "<p>This is the new div content</p>";
-
-          // Get the reference to the existing <nav> tag
+          newDiv.innerHTML =
+            "<p class='user_name'>This is the new div content</p>";
           var navTag = parentDiv.querySelector("nav");
-
-          // Check if the <nav> tag exists
           if (navTag) {
-            // Insert the new div after the <nav> tag
             navTag.insertAdjacentElement("afterend", newDiv);
           } else {
-            // Fallback option if <nav> tag is not found
             parentDiv.appendChild(newDiv);
           }
         }
       });
-
-      // Start observing the document body for changes
       observer.observe(targetNode, { childList: true, subtree: true });
     </script>
   </body>
