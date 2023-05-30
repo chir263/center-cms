@@ -88,8 +88,8 @@
         if (parentDiv) {
           observer.disconnect();
           var newDiv = document.createElement("div");
-          newDiv.innerHTML =
-            "<p class='user_name'>This is the new div content</p>";
+          newDiv.className = "user_name";
+          newDiv.innerHTML = "<p>This is the new div content</p>";
           var navTag = parentDiv.querySelector("nav");
           if (navTag) {
             navTag.insertAdjacentElement("afterend", newDiv);
