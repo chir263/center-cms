@@ -89,8 +89,9 @@
         var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
         if (parentDiv) {
           observer.disconnect();
-          var newDiv = document.createElement("div");
-          newDiv.innerHTML = `<p class='user_name'>${user_name}</p>`;
+          var newDiv = document.createElement("span");
+          newDiv.className = "user_name";
+          newDiv.innerHTML = `${user_name}`;
           var navTag = parentDiv.querySelector("img");
           if (navTag) {
             navTag.insertAdjacentElement("beforebegin", newDiv);
