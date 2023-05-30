@@ -63,9 +63,7 @@
       .user_name {
         font-size: 18px;
         color: #2d3e3f;
-        display: inline-flex;
-        -webkit-box-align: center;
-        align-items: center;
+        height: inherit;
       }
     </style>
     <script>
@@ -82,14 +80,16 @@
     </script>
 
     <script>
+      let user_name = JSON.parse(
+        localStorage.getItem("netlify-cms-user")
+      ).login;
       var targetNode = document.body;
       var observer = new MutationObserver(function (mutationsList, observer) {
         var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
         if (parentDiv) {
           observer.disconnect();
           var newDiv = document.createElement("div");
-          newDiv.className = "user_name";
-          newDiv.innerHTML = "<p>This is the new div content</p>";
+          newDiv.innerHTML = `<p class='user_name'>${user_name}</p>`;
           var navTag = parentDiv.querySelector("nav");
           if (navTag) {
             navTag.insertAdjacentElement("afterend", newDiv);
