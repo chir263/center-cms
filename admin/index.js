@@ -20,7 +20,7 @@ let CMS_CONFIG = {
   collections: [
     {
       name: "Experiment",
-      label: REPO_NAME,
+      label: EXPERIMENT,
       folder: "/experiment",
       create: false,
       slug: "experiment",
