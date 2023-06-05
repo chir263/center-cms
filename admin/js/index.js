@@ -44,9 +44,39 @@ let CMS_CONFIG = {
         },
         { name: "body", label: "Body", widget: "markdown" },
       ],
+
+      // fields:
+      //     - { name: title, label: Title, widget: hidden, default: "Aim" }
+      //     - { name: body, label: Body, widget: markdown }
       files: [
-        { name: "aim", label: "Aim", file: "experiment/aim.md" },
-        { name: "theory", label: "Theory", file: "experiment/theory.md" },
+        {
+          name: "aim",
+          label: "Aim",
+          file: "experiment/aim.md",
+          fields: [
+            {
+              name: "title",
+              label: "Title",
+              widget: "hidden",
+              default: "Aim",
+            },
+            { name: "body", label: "Body", widget: "markdown" },
+          ],
+        },
+        {
+          name: "theory",
+          label: "Theory",
+          file: "experiment/theory.md",
+          fields: [
+            {
+              name: "title",
+              label: "Title",
+              widget: "hidden",
+              default: "Theory",
+            },
+            { name: "body", label: "Body", widget: "markdown" },
+          ],
+        },
       ],
     },
   ],
