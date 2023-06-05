@@ -30,7 +30,7 @@ let CMS_CONFIG = {
       label: EXPERIMENT,
       folder: "/experiment",
       create: false,
-      slug: "experiment",
+      slug: "{{slug}}",
       delete: false,
       // fields: [
       //   {
@@ -52,7 +52,7 @@ let CMS_CONFIG = {
         {
           name: "aim",
           label: "Aim",
-          file: "experiment/aim.md",
+          file: "aim.md",
           fields: [
             {
               name: "title",
@@ -66,7 +66,7 @@ let CMS_CONFIG = {
         {
           name: "theory",
           label: "Theory",
-          file: "experiment/theory.md",
+          file: "theory.md",
           fields: [
             {
               name: "title",
