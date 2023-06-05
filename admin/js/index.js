@@ -1,6 +1,8 @@
 var para = new URLSearchParams(window.location.search);
 const ORGANISATION_NAME = para.get("ORGANISATION_NAME");
 const EXPERIMENT = para.get("EXPERIMENT");
+
+// config
 let CMS_CONFIG = {
   backend: {
     name: "github",
