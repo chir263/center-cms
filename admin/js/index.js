@@ -32,22 +32,6 @@ let CMS_CONFIG = {
       create: false,
       slug: "{{slug}}",
       delete: false,
-      // fields: [
-      //   {
-      //     name: "title",
-      //     label: "Title",
-      //     widget: "hidden",
-      //     pattern: [
-      //       "^([^\\.]+)\\.md$",
-      //       'File name should be in the format "Title.md"',
-      //     ],
-      //   },
-      //   { name: "body", label: "Body", widget: "markdown" },
-      // ],
-
-      // fields:
-      //     - { name: title, label: Title, widget: hidden, default: "Aim" }
-      //     - { name: body, label: Body, widget: markdown }
       files: [
         {
           name: "aim",
@@ -57,7 +41,7 @@ let CMS_CONFIG = {
             {
               name: "title",
               label: "Title",
-              widget: "hidden",
+              widget: "string",
               default: "Aim",
             },
             { name: "body", label: "Body", widget: "markdown" },
@@ -71,7 +55,7 @@ let CMS_CONFIG = {
             {
               name: "title",
               label: "Title",
-              widget: "hidden",
+              widget: "string",
               default: "Theory",
             },
             { name: "body", label: "Body", widget: "markdown" },
