@@ -14,11 +14,11 @@ let CMS_CONFIG = {
       },
     },
     commit_messages: {
-      create: "Create {{collection}} “{{slug}}” {{author-login}}",
-      update: "Update {{collection}} “{{slug}}” {{author-login}}",
-      delete: "Delete {{collection}} “{{slug}}” {{author-login}}",
-      uploadMedia: "Upload “{{path}}” {{author-login}}",
-      deleteMedia: "Delete “{{path}}” {{author-login}}",
+      create: "Created {{collection}} “{{slug}}” by {{author-login}}",
+      update: "Updated {{collection}} “{{slug}}” by {{author-login}}",
+      delete: "Deleted {{collection}} “{{slug}}” by {{author-login}}",
+      uploadMedia: "Uploaded “{{path}}” by {{author-login}}",
+      deleteMedia: "Deleted “{{path}}” by {{author-login}}",
       openAuthoring: "fss {{message}}",
     },
   },
@@ -28,11 +28,16 @@ let CMS_CONFIG = {
     {
       name: "Experiment",
       label: EXPERIMENT,
-      // folder: "/experiment",
       create: false,
       slug: "{{slug}}",
       delete: false,
       files: [
+        {
+          name: "experiment-name",
+          label: "Experiment Name",
+          file: "experiment/experiment-name.md",
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
+        },
         {
           name: "aim",
           label: "Aim",
@@ -43,6 +48,25 @@ let CMS_CONFIG = {
           name: "theory",
           label: "Theory",
           file: "experiment/theory.md",
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
+        },
+
+        {
+          name: "procedure",
+          label: "Procedure",
+          file: "experiment/procedure.md",
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
+        },
+        {
+          name: "contributors",
+          label: "Contributors",
+          file: "experiment/contributors.md",
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
+        },
+        {
+          name: "references",
+          label: "References",
+          file: "experiment/references.md",
           fields: [{ name: "body", label: "Body", widget: "markdown" }],
         },
       ],
