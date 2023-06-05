@@ -6,6 +6,9 @@ let CMS_CONFIG = {
     name: "github",
     repo: `${ORGANISATION_NAME}/${EXPERIMENT}`,
     branch: "master",
+    auth: {
+      logout: true,
+    },
     commit_messages: {
       create: "Create {{collection}} “{{slug}}” {{author-login}}",
       update: "Update {{collection}} “{{slug}}” {{author-login}}",

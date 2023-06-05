@@ -1,6 +1,7 @@
 let targetNode = document.body;
 var observer = new MutationObserver(function (mutationsList, observer) {
-  let user_name = JSON.parse(localStorage.getItem("netlify-cms-user")).login;
+  let user_name =
+    JSON.parse(localStorage.getItem("netlify-cms-user"))?.login || "user";
   var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
   if (parentDiv) {
     observer.disconnect();
