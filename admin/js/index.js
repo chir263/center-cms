@@ -32,18 +32,18 @@ let CMS_CONFIG = {
       create: false,
       slug: "experiment",
       delete: false,
-      fields: [
-        {
-          name: "title",
-          label: "Title",
-          widget: "hidden",
-          pattern: [
-            "^([^\\.]+)\\.md$",
-            'File name should be in the format "Title.md"',
-          ],
-        },
-        { name: "body", label: "Body", widget: "markdown" },
-      ],
+      // fields: [
+      //   {
+      //     name: "title",
+      //     label: "Title",
+      //     widget: "hidden",
+      //     pattern: [
+      //       "^([^\\.]+)\\.md$",
+      //       'File name should be in the format "Title.md"',
+      //     ],
+      //   },
+      //   { name: "body", label: "Body", widget: "markdown" },
+      // ],
 
       // fields:
       //     - { name: title, label: Title, widget: hidden, default: "Aim" }
