@@ -26,8 +26,8 @@
           event.preventDefault();
           var name = document.getElementById("nameInput").value;
           var para = new URLSearchParams();
-          para.append("repo", name);
-          para.append("acc_name", "chir263");
+          para.append("EXPERIMENT", name);
+          para.append("ORGANISATION_NAME", "chir263");
           window.location.href = `/admin?` + para.toString();
         });
     </script>
