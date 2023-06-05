@@ -7,7 +7,7 @@ let CMS_CONFIG = {
     repo: `${ORGANISATION_NAME}/${EXPERIMENT}`,
     branch: "master",
     auth: {
-      logout: true,
+      logout_url: "/",
     },
     commit_messages: {
       create: "Create {{collection}} “{{slug}}” {{author-login}}",
