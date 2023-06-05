@@ -69,6 +69,12 @@ let CMS_CONFIG = {
           file: "experiment/references.md",
           fields: [{ name: "body", label: "Body", widget: "markdown" }],
         },
+        {
+          name: "readme",
+          label: "README",
+          file: "experiment/README.md",
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
+        },
       ],
     },
   ],
