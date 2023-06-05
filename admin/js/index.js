@@ -6,8 +6,12 @@ let CMS_CONFIG = {
     name: "github",
     repo: `${ORGANISATION_NAME}/${EXPERIMENT}`,
     branch: "master",
-    auth: {
-      logout_url: "/",
+    auth_provider: {
+      name: "github",
+      config: {
+        logout_url:
+          "https://decapcms.org/docs/beta-features/#commit-message-templates",
+      },
     },
     commit_messages: {
       create: "Create {{collection}} “{{slug}}” {{author-login}}",
