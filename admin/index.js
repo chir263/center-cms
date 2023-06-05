@@ -37,7 +37,7 @@ function back_to_home() {
   window.location.href = `/`;
 }
 
-var targetNode = document.body;
+let targetNode = document.body;
 var observer = new MutationObserver(function (mutationsList, observer) {
   let user_name = JSON.parse(localStorage.getItem("netlify-cms-user")).login;
   var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
