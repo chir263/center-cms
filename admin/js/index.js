@@ -37,29 +37,13 @@ let CMS_CONFIG = {
           name: "aim",
           label: "Aim",
           file: "experiment/aim.md",
-          fields: [
-            {
-              name: "title",
-              label: "Title",
-              widget: "string",
-              default: "Aim",
-            },
-            { name: "body", label: "Body", widget: "markdown" },
-          ],
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
         },
         {
           name: "theory",
           label: "Theory",
           file: "experiment/theory.md",
-          fields: [
-            {
-              name: "title",
-              label: "Title",
-              widget: "string",
-              default: "Theory",
-            },
-            { name: "body", label: "Body", widget: "markdown" },
-          ],
+          fields: [{ name: "body", label: "Body", widget: "markdown" }],
         },
       ],
     },
