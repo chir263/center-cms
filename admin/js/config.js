@@ -82,24 +82,28 @@ let CMS_CONFIG = {
     {
       name: "simulation",
       label: "Simulation",
-      folder: "experiment/simulation",
       media_folder: "",
-      create: true,
+      create: false,
       slug: "simulation-upload",
-      fields: [
+      files: [
         {
-          name: "title",
-          label: "Title",
-          widget: "string",
-          default: "Upload Simulations",
-          editable: false,
-        },
-        {
-          name: "file",
-          label: "File",
-          widget: "list",
+          name: "simulation-upload",
+          label: "Upload Simulations",
+          file: "experiment/simulation/simulation-upload.md",
           fields: [
-            { name: "file", label: "File", widget: "file", required: false },
+            {
+              name: "file",
+              label: "File",
+              widget: "list",
+              fields: [
+                {
+                  name: "file",
+                  label: "File",
+                  widget: "file",
+                  required: false,
+                },
+              ],
+            },
           ],
         },
       ],
@@ -116,13 +120,6 @@ let CMS_CONFIG = {
           label: "Upload Simulations CSS",
           file: "experiment/simulation/css/simulation-upload-css.md",
           fields: [
-            // {
-            //   name: "title",
-            //   label: "Title",
-            //   widget: "string",
-            //   default: "Upload Simulations CSS",
-            //   editable: false,
-            // },
             {
               name: "file",
               label: "File",
@@ -143,24 +140,28 @@ let CMS_CONFIG = {
     {
       name: "simulation-js",
       label: "Simulation JS",
-      folder: "experiment/simulation/js",
       media_folder: "",
-      create: true,
+      create: false,
       slug: "simulation-upload-js",
-      fields: [
+      files: [
         {
-          name: "title",
-          label: "Title",
-          widget: "string",
-          default: "Upload Simulations JS",
-          editable: false,
-        },
-        {
-          name: "file",
-          label: "File",
-          widget: "list",
+          name: "simulation-upload-js",
+          label: "Upload Simulations JS",
+          file: "experiment/simulation/js/simulation-upload-js.md",
           fields: [
-            { name: "file", label: "File", widget: "file", required: false },
+            {
+              name: "file",
+              label: "File",
+              widget: "list",
+              fields: [
+                {
+                  name: "file",
+                  label: "File",
+                  widget: "file",
+                  required: false,
+                },
+              ],
+            },
           ],
         },
       ],
@@ -168,24 +169,28 @@ let CMS_CONFIG = {
     {
       name: "simulation-images",
       label: "Simulation Images",
-      folder: "experiment/simulation/images",
       media_folder: "",
-      create: true,
+      create: false,
       slug: "simulation-upload-images",
-      fields: [
+      files: [
         {
-          name: "title",
-          label: "Title",
-          widget: "string",
-          default: "Upload Simulations Images",
-          editable: false,
-        },
-        {
-          name: "file",
-          label: "File",
-          widget: "list",
+          name: "simulation-upload-images",
+          label: "Upload Simulations Images",
+          file: "experiment/simulation/images/simulation-upload-images.md",
           fields: [
-            { name: "file", label: "File", widget: "file", required: false },
+            {
+              name: "file",
+              label: "File",
+              widget: "list",
+              fields: [
+                {
+                  name: "file",
+                  label: "File",
+                  widget: "file",
+                  required: false,
+                },
+              ],
+            },
           ],
         },
       ],
