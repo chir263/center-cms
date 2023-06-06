@@ -88,13 +88,13 @@ let CMS_CONFIG = {
       create: true,
       slug: "upload-simulation",
       fields: [
-        {
-          name: "title",
-          label: "Title",
-          widget: "string",
-          default: "Upload Simulations",
-          editable: false,
-        },
+        // {
+        //   name: "title",
+        //   label: "Title",
+        //   widget: "string",
+        //   default: "Upload Simulations",
+        //   editable: false,
+        // },
         {
           name: "file",
           label: "File",
