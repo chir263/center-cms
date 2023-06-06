@@ -107,24 +107,36 @@ let CMS_CONFIG = {
     {
       name: "simulation-css",
       label: "Simulation CSS",
-      folder: "experiment/simulation/css",
-      media_folder: "",
+      // folder: "experiment/simulation/css",
+      media_folder: "experiment/simulation/css",
       create: true,
       slug: "simulation-upload-css",
-      fields: [
+      files: [
         {
-          name: "title",
-          label: "Title",
-          widget: "string",
-          default: "Upload Simulations CSS",
-          editable: false,
-        },
-        {
-          name: "file",
-          label: "File",
-          widget: "list",
+          name: "experiment-name",
+          label: "Experiment Name",
+          file: "experiment/simulation/css/simulation-upload-css.md",
           fields: [
-            { name: "file", label: "File", widget: "file", required: false },
+            {
+              name: "title",
+              label: "Title",
+              widget: "string",
+              default: "Upload Simulations CSS",
+              editable: false,
+            },
+            {
+              name: "file",
+              label: "File",
+              widget: "list",
+              fields: [
+                {
+                  name: "file",
+                  label: "File",
+                  widget: "file",
+                  required: false,
+                },
+              ],
+            },
           ],
         },
       ],
