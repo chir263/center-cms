@@ -86,7 +86,7 @@ let CMS_CONFIG = {
       media_folder: "",
       public_folder: "",
       create: true,
-      slug: "{{slug}}",
+      slug: "upload-simulation",
       fields: [
         {
           name: "file",
