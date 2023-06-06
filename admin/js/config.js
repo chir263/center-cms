@@ -87,10 +87,7 @@ let CMS_CONFIG = {
       public_folder: "",
       create: true,
       slug: "{{slug}}",
-      fields: [
-        { name: "title", label: "Title", widget: "string" },
-        { name: "file", label: "File", widget: "file" },
-      ],
+      fields: [{ name: "file", label: "File", widget: "file" }],
     },
   ],
 };
