@@ -98,7 +98,9 @@ let CMS_CONFIG = {
           name: "file",
           label: "File",
           widget: "list",
-          fields: [{ name: "file", label: "File", widget: "file" }],
+          fields: [
+            { name: "file", label: "File", widget: "file", required: false },
+          ],
         },
       ],
     },
