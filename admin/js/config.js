@@ -82,7 +82,7 @@ let CMS_CONFIG = {
     {
       name: "simulation",
       label: "Simulation",
-      folder: "simulation",
+      folder: "experiment/simulation",
       create: true,
       slug: "{{slug}}",
       fields: [
