@@ -82,11 +82,10 @@ let CMS_CONFIG = {
     {
       name: "simulation",
       label: "Simulation",
-      folder: "experiment",
-      media_folder: "simulation/",
-      public_folder: "simulation/",
+      folder: "experiment/simulation",
+      media_folder: "",
       create: true,
-      slug: "upload-simulation",
+      slug: "simulation-upload",
       fields: [
         // {
         //   name: "title",
