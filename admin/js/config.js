@@ -88,7 +88,12 @@ let CMS_CONFIG = {
       create: true,
       slug: "{{slug}}",
       fields: [
-        { name: "file", label: "File", widget: "file", allow_multiple: true },
+        {
+          name: "file",
+          label: "File",
+          widget: "list",
+          fields: [{ name: "file", label: "File", widget: "file" }],
+        },
       ],
     },
   ],
