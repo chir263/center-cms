@@ -33,7 +33,6 @@ let CMS_CONFIG = {
       create: false,
       slug: "{{slug}}",
       delete: false,
-      summary: "<img src='{{label}}' /> <span class='fullName'>{{body}}</span>",
       files: [
         {
           name: "experiment-name",
@@ -93,6 +92,81 @@ let CMS_CONFIG = {
           label: "Title",
           widget: "string",
           default: "Upload Simulations",
+          editable: false,
+        },
+        {
+          name: "file",
+          label: "File",
+          widget: "list",
+          fields: [
+            { name: "file", label: "File", widget: "file", required: false },
+          ],
+        },
+      ],
+    },
+    {
+      name: "simulation-css",
+      label: "Simulation CSS",
+      folder: "experiment/simulation/css",
+      media_folder: "",
+      create: true,
+      slug: "simulation-upload-css",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          widget: "string",
+          default: "Upload Simulations CSS",
+          editable: false,
+        },
+        {
+          name: "file",
+          label: "File",
+          widget: "list",
+          fields: [
+            { name: "file", label: "File", widget: "file", required: false },
+          ],
+        },
+      ],
+    },
+    {
+      name: "simulation-js",
+      label: "Simulation JS",
+      folder: "experiment/simulation/js",
+      media_folder: "",
+      create: true,
+      slug: "simulation-upload-js",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          widget: "string",
+          default: "Upload Simulations JS",
+          editable: false,
+        },
+        {
+          name: "file",
+          label: "File",
+          widget: "list",
+          fields: [
+            { name: "file", label: "File", widget: "file", required: false },
+          ],
+        },
+      ],
+    },
+    {
+      name: "simulation-images",
+      label: "Simulation Images",
+      folder: "experiment/simulation/images",
+      media_folder: "",
+      create: true,
+      slug: "simulation-upload-images",
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          widget: "string",
+          default: "Upload Simulations Images",
           editable: false,
         },
         {
