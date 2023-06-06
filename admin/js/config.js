@@ -107,9 +107,8 @@ let CMS_CONFIG = {
     {
       name: "simulation-css",
       label: "Simulation CSS",
-      // folder: "experiment/simulation/css",
       media_folder: "",
-      create: true,
+      create: false,
       slug: "simulation-upload-css",
       files: [
         {
