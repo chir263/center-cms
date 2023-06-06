@@ -113,17 +113,17 @@ let CMS_CONFIG = {
       slug: "simulation-upload-css",
       files: [
         {
-          name: "experiment-name",
-          label: "Experiment Name",
+          name: "simulation-upload-css",
+          label: "Upload Simulations CSS",
           file: "experiment/simulation/css/simulation-upload-css.md",
           fields: [
-            {
-              name: "title",
-              label: "Title",
-              widget: "string",
-              default: "Upload Simulations CSS",
-              editable: false,
-            },
+            // {
+            //   name: "title",
+            //   label: "Title",
+            //   widget: "string",
+            //   default: "Upload Simulations CSS",
+            //   editable: false,
+            // },
             {
               name: "file",
               label: "File",
