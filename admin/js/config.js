@@ -33,6 +33,7 @@ let CMS_CONFIG = {
       create: false,
       slug: "{{slug}}",
       delete: false,
+      summary: "<img src='{{label}}' /> <span class='fullName'>{{body}}</span>",
       files: [
         {
           name: "experiment-name",
