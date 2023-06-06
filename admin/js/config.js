@@ -79,6 +79,17 @@ let CMS_CONFIG = {
         },
       ],
     },
+    {
+      name: "simulation",
+      label: "Simulation",
+      folder: "simulation",
+      create: true,
+      slug: "{{slug}}",
+      fields: [
+        { name: "title", label: "Title", widget: "string" },
+        { name: "file", label: "File", widget: "file" },
+      ],
+    },
   ],
 };
 
