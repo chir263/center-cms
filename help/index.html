@@ -6,7 +6,25 @@
       body {
         margin: 0;
         padding: 0;
-        /* overflow: hidden; */
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 3px;
+      }
+
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #bebebe;
+
+        &:hover {
+          background-color: #9e9e9e;
+        }
       }
 
       #markdown-container {
@@ -22,7 +40,6 @@
       #markdown-content {
         width: 100%;
         height: 100%;
-        /* overflow-y: scroll; */
         padding: 20px;
         box-sizing: border-box;
         background-color: #fff;
