@@ -24,6 +24,25 @@
 #bottom-menu {
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 20px;
     z-index: 99;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #eaeced;
+
+    &:hover {
+        background: #d5e0f3;
+    }
 }
