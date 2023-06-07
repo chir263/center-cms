@@ -1,35 +1,138 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>VLabs CMS</title>
+    <title>Webpage with Fixed Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        background-color: #f0f0f2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 9999;
+      }
+
+      .navbar img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .navbar-title {
+        font-size: 20px;
+      }
+
+      .form-section {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #259b97;
+        padding-top: 30px;
+      }
+
+      .form-section form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .form-section input[type="text"] {
+        padding: 10px;
+        margin-right: 0;
+        border: none;
+        background-color: #e4e4e5;
+        color: #3f3f3f;
+        transition: background-color 0.3s ease;
+        width: 500px;
+        font-size: 18px;
+        flex-grow: 1;
+        border-radius: 0;
+        border-right: none;
+      }
+
+      .form-section input[type="text"]:hover {
+        background-color: #e0f2f2;
+      }
+
+      .form-section input[type="text"]:focus {
+        background-color: #d1e9e9;
+        outline: none;
+      }
+
+      .form-section button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #2bafab;
+        border: none;
+        color: #ffffff;
+        transition: background-color 0.3s ease;
+        flex-grow: 1;
+        border-radius: 0;
+        font-size: 18px;
+      }
+
+      .form-section button[type="submit"]:hover {
+        background-color: #0f968f;
+        cursor: pointer;
+      }
+
+      .form-section button[type="submit"]:active {
+        background-color: #076760;
+      }
+
+      .iframe-section {
+        width: 100%;
+        height: calc(100vh - 70px - 20vh);
+        border: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .form-section {
+          margin-top: 60px;
+          flex-direction: column;
+        }
+
+        .form-section input[type="text"],
+        .form-section button[type="submit"] {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <form id="myForm">
-      <label for="nameInput">Repository:</label>
-      <input
-        type="text"
-        id="nameInput"
-        name="nameInput"
-        value="test-exp-1"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="navbar">
+      <img src="./css/download.png" alt="Logo" />
+      <span class="navbar-title">VLabs CMS</span>
+    </div>
 
-    <script>
-      document
-        .getElementById("myForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          var name = document.getElementById("nameInput").value;
-          var para = new URLSearchParams();
-          para.append("EXPERIMENT", name);
-          para.append("ORGANISATION_NAME", "chir263");
-          window.location.href = `/admin?` + para.toString();
-        });
-    </script>
+    <div class="form-section">
+      <form id="myForm">
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Experiment Repository Name"
+          required
+        />
+        <button type="submit">Edit</button>
+      </form>
+    </div>
+
+    <iframe class="iframe-section" src="./help"></iframe>
+    <script src="./js/script.js"></script>
   </body>
 </html>
