@@ -1,82 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>VLabs CMS Help</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      ::-webkit-scrollbar {
-        width: 4px;
-        height: 3px;
-      }
-
-      ::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: transparent;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: #bebebe;
-
-        &:hover {
-          background-color: #9e9e9e;
-        }
-      }
-
-      #markdown-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f1f1f1;
-        border: none;
-      }
-
-      #markdown-content {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #fff;
-        font-family: Arial, sans-serif;
-        border: none;
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
   <body>
-    <div id="markdown-container">
-      <div id="markdown-content"></div>
+    <script src="./help-data.js"></script>
+
+    <div class="slideshow-container">
+      <script>
+        for (let i = 1; i <= HELP_DATA.length; i++) {
+          let file = HELP_DATA[i - 1].file;
+          let caption = HELP_DATA[i - 1].caption;
+          document.write(`
+          <div class="mySlides fade">
+            <div class="numbertext">${i} / ${HELP_DATA.length}</div>
+            <div class="text">${caption}</div>
+            <div class="slide-content">
+              <div id="markdown-content-${i}" class="markdown-content"></div>
+            </div>
+          </div>
+        `);
+          fetch(file)
+            .then((response) => response.text())
+            .then((markdown) => {
+              const converter = new showdown.Converter({
+                simplifiedAutoLink: true,
+                excludeTrailingPunctuationFromURLs: true,
+                openLinksInNewWindow: true,
+                strikethrough: true,
+                tables: true,
+                tasklists: true,
+                ghCodeBlocks: true,
+                smoothLivePreview: true,
+                smartIndentationFix: true,
+                disableForced4SpacesIndentedSublists: true,
+                simpleLineBreaks: true,
+                requireSpaceBeforeHeadingText: true,
+              });
+              const html = converter.makeHtml(markdown);
+              document.getElementById(`markdown-content-${i}`).innerHTML = html;
+            });
+        }
+      </script>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <!-- <br /> -->
+
+    <div style="text-align: center">
+      <script>
+        for (let i = 1; i <= HELP_DATA.length; i++) {
+          document.write(`
+            <span class="dot" onclick="currentSlide(${i})"></span>
+        `);
+        }
+      </script>
     </div>
 
     <script>
-      window.onload = function () {
-        fetch("help.md")
-          .then((response) => response.text())
-          .then((markdown) => {
-            const converter = new showdown.Converter({
-              simplifiedAutoLink: true,
-              excludeTrailingPunctuationFromURLs: true,
-              openLinksInNewWindow: true,
-              strikethrough: true,
-              tables: true,
-              tasklists: true,
-              ghCodeBlocks: true,
-              smoothLivePreview: true,
-              smartIndentationFix: true,
-              disableForced4SpacesIndentedSublists: true,
-              simpleLineBreaks: true,
-              requireSpaceBeforeHeadingText: true,
-            });
-            const html = converter.makeHtml(markdown);
-            document.getElementById("markdown-content").innerHTML = html;
-          });
-      };
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <script>
+      window.onload = function () {};
     </script>
   </body>
 </html>

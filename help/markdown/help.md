@@ -1,23 +1,5 @@
 # Virtual Labs CMS Help Document
 
-<style>
-    body {
-        background-color: #efefef;
-        color: #000000;
-    }
-
-     h1, h3, h4, h5, h6 {
-        color: #5b5b5b;
-    }
-    h2 {
-        color: #00afa1;
-    }
-
-    a {
-        color: #00cec0;
-    }
-</style>
-
 ## Introduction
 
 Welcome to the Virtual Labs CMS! This help document provides guidance on using the CMS to create and edit experiments in collaboration with GitHub repositories.

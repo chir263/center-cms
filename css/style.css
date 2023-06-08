@@ -5,6 +5,43 @@ body {
     overflow: hidden;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 10vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #efefef;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 3px;
@@ -116,7 +153,9 @@ body {
 
 .iframe-section {
     width: 100%;
-    height: calc(100vh - 20px - 20vh);
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 20vh);
     border: none;
 }
 
@@ -131,4 +170,27 @@ body {
         width: 100%;
         margin-right: 0;
     }
+}
+
+#bottom-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+.myBtn {
+
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #b2b7c5;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.myBtn:hover {
+    background-color: #555;
 }
