@@ -1,10 +1,6 @@
-# Introduction
-
-Welcome to Virtual Labs, an initiative by the Ministry of Human Resource Development (MHRD), Government of India, aimed at revolutionizing ICT-based education. Virtual Labs is a cutting-edge project that allows you to access and perform remote experiments from anywhere, anytime, using the power of technology.
-
 ## About Virtual Labs
 
-Virtual Labs is a consortium activity of twelve participating institutes, with IIT Delhi as the coordinating institute. It is a paradigm shift in education, leveraging the potential of Information and Communication Technology (ICT). Through Virtual Labs, the project aims to provide a unique learning experience by enabling remote experimentation for the first time.
+Welcome to Virtual Labs, an initiative by the Ministry of Human Resource Development (MHRD), Government of India, aimed at revolutionizing ICT-based education. Virtual Labs is a consortium activity of twelve participating institutes, with IIT Delhi as the coordinating institute. It is a paradigm shift in education, leveraging the potential of Information and Communication Technology (ICT). Through Virtual Labs, the project aims to provide a unique learning experience by enabling remote experimentation for the first time.
 
 ## The Power of Remote Experimentation
 
