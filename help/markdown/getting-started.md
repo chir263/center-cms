@@ -1,5 +1,3 @@
-# Getting Started
-
 Before you can begin building your own remote experiment, follow these steps to access and edit your selected experiment.
 
 ## 1. Accessing Your Experiment
