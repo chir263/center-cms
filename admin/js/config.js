@@ -17,7 +17,8 @@ let CMS_CONFIG = {
       openAuthoring: "fss {{message}}",
     },
   },
-  media_folder: "experiment/images",
+  public_folder: "experiment",
+  media_folder: "images",
 
   collections: [
     {
