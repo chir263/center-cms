@@ -2,6 +2,8 @@
 
 Before you can begin building your own remote experiment, follow these steps to access and edit your selected experiment.
 
+![Alt Text](../img/getting-started.png)
+
 ## 1. Accessing Your Experiment
 
 After logging in with your GitHub account, you will be directed to a window where you can edit the experiment you have selected. Only experiments for which you have been granted permission as a collaborator will be accessible.
