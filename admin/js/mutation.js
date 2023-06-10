@@ -1,11 +1,9 @@
 let targetNode = document.body;
 var observer = new MutationObserver(function (mutationsList, observer) {
   var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
-
   if (parentDiv) {
     let user_name =
       JSON.parse(localStorage.getItem("netlify-cms-user"))?.login || "user";
-    observer.disconnect();
     var newDiv = document.createElement("span");
     newDiv.className = "user_name";
     newDiv.innerHTML = `${user_name}`;
@@ -14,6 +12,20 @@ var observer = new MutationObserver(function (mutationsList, observer) {
       navTag.insertAdjacentElement("beforebegin", newDiv);
     } else {
       parentDiv.appendChild(newDiv);
+    }
+  }
+
+  let simulation = [
+    "simulation-upload",
+    "simulation-upload-css",
+    "simulation-upload-js",
+    "simulation-upload-images",
+  ];
+
+  for (let name of simulation) {
+    if (window.location.href.endsWith(name)) {
+      element = document.querySelector('[class*="Pane vertical Pane1  "]');
+      element.style.width = "100%";
     }
   }
 });
