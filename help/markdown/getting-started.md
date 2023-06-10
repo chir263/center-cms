@@ -6,7 +6,7 @@ Before you can begin building your own remote experiment, follow these steps to 
 
 After logging in with your GitHub account, you will be directed to a window where you can edit the experiment you have selected. Only experiments for which you have been granted permission as a collaborator will be accessible.
 
-<img src="../img/getting-started.png"/>
+<img src="/help/img/getting-started.png"/>
 
 ## 2. Uploading Media
 
