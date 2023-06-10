@@ -88,6 +88,7 @@ let CMS_CONFIG = {
               name: "file",
               label: "File",
               widget: "list",
+              preview_disabled: true,
               fields: [
                 {
                   name: "file",
