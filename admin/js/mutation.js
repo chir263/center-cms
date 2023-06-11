@@ -42,9 +42,11 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
 
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
-      observer.disconnect();
-      element = document.querySelector('[class*="Pane vertical Pane1  "]');
-      element.style.width = "100%";
+      let element = document.querySelector('[class*="Pane vertical Pane1  "]');
+      if (element) {
+        observer.disconnect();
+        element.style.width = "100%";
+      }
     }
   }
 });
