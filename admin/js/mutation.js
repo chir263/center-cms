@@ -39,15 +39,18 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     "simulation-upload-js",
     "simulation-upload-images",
   ];
-
+  let num = 0;
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
       if (element) {
-        observer.disconnect();
+        num++;
         element.style.width = "100%";
       }
     }
+  }
+  if (num === simulation.length) {
+    observer.disconnect();
   }
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
