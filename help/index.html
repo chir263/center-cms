@@ -51,7 +51,9 @@
       <script>
         for (let i = 1; i <= HELP_DATA.length; i++) {
           document.write(`
-            <span class="dot" onclick="currentSlide(${i})" title="${HELP_DATA[i].caption}"></span>
+            <span class="dot" onclick="currentSlide(${i})" title="${
+            HELP_DATA[i - 1].caption
+          }"></span>
         `);
         }
       </script>
