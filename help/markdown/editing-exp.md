@@ -6,15 +6,15 @@ In Virtual Labs Builder, you can easily modify the different components of your 
 
 <img src="/help/img/exp-1.png" width="800" height="350"/>
 
-2. Editing Interface: On the redirected page, you will see two sections. The left pane contains a Markdown editor, while the right pane displays a preview of the edited content. The Markdown editor allows you to write and format text using simple syntax.
+2. **Editing Interface**: On the redirected page, you will see two sections. The left pane contains a Markdown editor, while the right pane displays a preview of the edited content. The Markdown editor allows you to write and format text using simple syntax.
 
 <img src="/help/img/exp-2.png" width="800" height="350"/>
 
-3. Editor Functionality: Most of the editor functionalities are straightforward and intuitive. You can use basic Markdown syntax to format your text, such as adding headings, creating lists, emphasizing text, and more. You can refer to Markdown cheat sheets or guides for more advanced formatting options.
+3. **Editor Functionality**: Most of the editor functionalities are straightforward and intuitive. You can use basic Markdown syntax to format your text, such as adding headings, creating lists, emphasizing text, and more. You can refer to Markdown cheat sheets or guides for more advanced formatting options.
 
 <img src="/help/img/exp-3.png" width="800" height="350"/>
 
-4. Inserting Images: To insert an image into your Aim component, click on the **+** button in the editor. This will open a pop-up menu with two options: **Image** and **Code Block**. Click on the **Image** option to insert an image into your Aim section. You can then provide the image URL or choose an image from your uploaded media assets.
+4. **Inserting Images**: To insert an image into your Aim component, click on the **+** button in the editor. This will open a pop-up menu with two options: **Image** and **Code Block**. Click on the **Image** option to insert an image into your Aim section. You can then provide the image URL or choose an image from your uploaded media assets.
 
 <img src="/help/img/exp-3.png" width="800" height="350"/>
 
