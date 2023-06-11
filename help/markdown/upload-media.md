@@ -1,6 +1,6 @@
 # Upload Media
 
-Within Virtual Labs, you can upload media files, such as images, which can be used in different components of your experiment, like the Aim or Theory. Uploading media files enhances your experiment and allows you to create an immersive learning experience. To upload media files, follow these steps:
+Within Virtual Labs Builder, you can upload media files, such as images, which can be used in different components of your experiment, like the Aim or Theory. Uploading media files enhances your experiment and allows you to create an immersive learning experience. To upload media files, follow these steps:
 
 1. Navigation Bar: At the top of the page, you will find a navigation bar. Click on the **Media** button in the navigation bar. This will open a pane titled **Media assets** where you can manage your uploaded media files.
 
