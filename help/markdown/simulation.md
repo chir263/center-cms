@@ -12,21 +12,33 @@ The simulations are organized in a directory structure as follows:
 
 To upload simulation files, follow these steps:
 
-1. Collection Pane: After logging in, you will see a **Collection pane** on the left side of the page. This pane contains tabs representing different folders related to simulations, such as **Simulation**, **Simulation CSS**, **Simulation JS**, and **Simulation Images**. These tabs are connected to the corresponding folders in the simulations directory structure.
+1. Collection Pane: After logging in, you will see a **Collection** Pane on the left side of the page. This pane contains tabs representing different folders related to simulations, such as **Simulation**, **Simulation CSS**, **Simulation JS**, and **Simulation Images**. These tabs are connected to the corresponding folders in the simulations directory structure.
+
+<img src="/help/img/sim-1.png" width="800" height="350"/>
 
 2. Select Tab: Click on the tab that corresponds to the type of file you want to upload. For example, if you want to upload a CSS file for the simulation, click on the **Simulation CSS** tab.
 
 3. Upload Card: In the center of the page, you will find a card labeled "**Upload Simulation CSS**" (replace "Simulation CSS" with the appropriate tab name). Click on this card to open the upload screen.
 
+<img src="/help/img/sim-2.png" width="800" height="350"/>
+
 4. File List Widget: The upload screen will display a file list widget. This widget shows the files currently present in the selected folder.
 
 5. Add File: To add a new file, click on the "**Add File +**" button in the file list widget. This will add a new file widget to the list.
 
-6. Media Asset Pane: Click on the file widget that you just added. This will open the "**Media Asset**" pane, which is linked to the respective folder (simulation, CSS, JS, or images). The **Media Asset** pane provides options for managing your files.
+<img src="/help/img/sim-3.png" width="800" height="350"/>
 
-7. Upload File: In the "**Media Asset**" pane, click on the "**Upload**" button to select a file from your local system and upload it to the corresponding folder.
+6. Media Asset Pane: Click on the **Choose a file** in the file widget that you just added. This will open the **Media Asset** pane, which is linked to the respective folder (simulation, simulation/css, simulation/js, or simulation/images). The **Media Asset** pane provides options for managing your files.
 
-8. Additional Options: The "**Media Asset**" pane also offers additional options such as downloading a selected file, copying the file path, or deleting the selected file if needed. These options allow you to manage your simulation files effectively.
+<img src="/help/img/sim-4.png" width="800" height="350"/>
+
+7. Upload File: In the **Media Asset** pane, click on the **Upload** button to select a file from your local system and upload it to the corresponding folder.
+
+8. Additional Options: The **Media Asset** pane also offers additional options such as downloading a selected file, copying the file path, or deleting the selected file if needed. These options allow you to manage your simulation files effectively.
+
+9. Publishing Changes: After you have uploaded the simulation files, make sure to click on the **Publish** button to save your changes and make them available for users to access.
+
+<img src="/help/img/sim-5.png" width="800" height="350"/>
 
 Repeat these steps for each file you want to upload, ensuring that you select the appropriate tab and follow the same process for each file type (HTML, CSS, JS, or images).
 
