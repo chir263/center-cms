@@ -7,7 +7,7 @@ let CMS_CONFIG = {
   backend: {
     name: "github",
     repo: `${ORGANISATION_NAME}/${EXPERIMENT}`,
-    branch: "master",
+    branch: "main",
     commit_messages: {
       create: "Created {{collection}} “{{slug}}” by {{author-login}}",
       update: "Updated {{collection}} “{{slug}}” by {{author-login}}",

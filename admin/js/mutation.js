@@ -50,7 +50,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     }
   }
   if (num === simulation.length) {
-    observer.disconnect();
+    observer1.disconnect();
   }
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
