@@ -143,11 +143,11 @@ let CMS_CONFIG = {
       label: "Simulation Images",
       media_folder: "",
       create: false,
-      slug: ".simulation-upload-images",
+      slug: "simulation-upload-images",
 
       files: [
         {
-          name: ".simulation-upload-images",
+          name: "simulation-upload-images",
           label: "View/Upload Simulation Images",
           file: "experiment/simulation/images/simulation-upload-images.md",
           fields: [
