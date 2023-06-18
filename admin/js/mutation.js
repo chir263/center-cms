@@ -23,12 +23,12 @@ let simulation = [
   "simulation-upload-js",
   "simulation-upload-images",
 ];
-let arr = {
-  "simulation-upload": 0,
-  "simulation-upload-css": 0,
-  "simulation-upload-js": 0,
-  "simulation-upload-images": 0,
-};
+let nonSimulation = [
+  "simulation",
+  "simulation-css",
+  "simulation-js",
+  "simulation-images",
+];
 
 var observer1 = new MutationObserver(function (mutationsList, observer) {
   let num = 0;
@@ -47,26 +47,28 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         header.style.zIndex = 99999 + 1;
         if (1) {
           button.click();
-          var ReactModalPortal = document.querySelector("div.ReactModalPortal");
-
-          // Get the first <div> element within the parentDiv
-          var firstDiv = ReactModalPortal.querySelector("div");
-
-          firstDiv.style.zIndex = 1;
           let modal = document.querySelector('[class*="StyledModal"]');
           if (modal) {
             modal.style.width = "100%";
             modal.style.height = "90%";
             modal.style.marginTop = "5%";
           }
-          arr[name] = 1;
         }
       }
     }
   }
-  if (num === simulation.length) {
-    observer1.disconnect();
+
+  for (let name of nonSimulation) {
+    if (window.location.href.endsWith(name)) {
+      var ReactModalPortal = document.querySelector("div.ReactModalPortal");
+      if (ReactModalPortal) {
+        ReactModalPortal.remove();
+      }
+    }
   }
+  // if (num === simulation.length) {
+  //   observer1.disconnect();
+  // }
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
 
