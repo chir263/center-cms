@@ -47,7 +47,10 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         if (!arr[name]) {
           button.click();
           let modal = document.querySelector('[class*="StyledModal"]');
-          if (modal) modal.style.width = "100%";
+          if (modal) {
+            modal.style.width = "100%";
+            modal.style.height = "90%";
+          }
           arr[name] = 1;
         }
       }
