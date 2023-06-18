@@ -50,9 +50,9 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       //
       if (element && button) {
         num++;
+        header.style.zIndex = 99999 + 10;
         element.style.width = "100%";
-        // button.click();
-        header.style.zIndex = 99999 + 1;
+        button.click();
       }
     }
   }
