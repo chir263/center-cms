@@ -26,7 +26,7 @@ var observer = new MutationObserver(function (mutationsList, observer) {
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       element = document.querySelector('[class*="Pane vertical Pane1  "]');
-      element?.style.width = "100%";
+      element.style.width = "100%";
     }
   }
 });
@@ -50,8 +50,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       //
       if (element && button) {
         num++;
-        header.style.zIndex = 99999 + 10;
-        element?.style.width = "100%";
+        element.style.width = "100%";
         // button.click();
       }
     }
