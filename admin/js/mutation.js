@@ -70,14 +70,14 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
-        if (lastButton) lastButton.style.display = "none";
+        if (lastButton) lastButton.style.opacity = "0";
       }
       // AppHeaderButton
     } else {
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
-        if (lastButton) lastButton.style.display = "inline";
+        if (lastButton) lastButton.style.opacity = "1";
       }
     }
   }
