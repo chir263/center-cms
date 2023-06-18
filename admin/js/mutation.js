@@ -45,14 +45,12 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
-        if (1) {
-          button.click();
-          let modal = document.querySelector('[class*="StyledModal"]');
-          if (modal) {
-            modal.style.width = "100%";
-            modal.style.height = "90%";
-            modal.style.marginTop = "5%";
-          }
+        button.click();
+        let modal = document.querySelector('[class*="StyledModal"]');
+        if (modal) {
+          modal.style.width = "100%";
+          modal.style.height = "90%";
+          modal.style.marginTop = "5%";
         }
       }
     }
@@ -62,7 +60,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
       if (ReactModalPortal) {
-        ReactModalPortal.remove();
+        // ReactModalPortal.remove();
       }
     }
   }
