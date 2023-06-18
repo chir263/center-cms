@@ -47,14 +47,10 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
         if (!arr[name]) {
-          CloseButton.remove();
           button.click();
+          if (CloseButton) CloseButton.remove();
           arr[name] = 1;
         }
-        // setTimeout(() => {
-        //   button.click();
-        //   if (menu) menu.style.zIndex = 99999 + 10;
-        // }, 1000);
       }
     }
   }
