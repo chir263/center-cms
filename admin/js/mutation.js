@@ -68,11 +68,11 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         element.dispatchEvent(clickEvent);
       }
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
+      console.log(buttons);
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
         if (lastButton) lastButton.style.opacity = "0";
       }
-      // AppHeaderButton
     } else {
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
