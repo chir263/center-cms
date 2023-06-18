@@ -78,8 +78,11 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     }
 
     if (isVisible) {
-      var lastButton = buttons[buttons.length - 1];
-      if (lastButton) lastButton.style.visibility = "visible";
+      let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
+      if (buttons) {
+        var lastButton = buttons[buttons.length - 1];
+        if (lastButton) lastButton.style.visibility = "visible";
+      }
     }
   }
 });
