@@ -46,11 +46,13 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       let button = document.querySelector(
         '[class*="FileWidgetButton-button-badge-backgroundBadge-badge"]'
       );
+      let header = document.querySelector('[class*="AppHeader"]');
       //
       if (element && button) {
         num++;
         element.style.width = "100%";
-        // button.click();
+        button.click();
+        header.style.zIndex = 10000;
       }
     }
   }
