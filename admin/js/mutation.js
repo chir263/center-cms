@@ -43,9 +43,14 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
-      if (element) {
+      let button = document.querySelector(
+        '[class*="FileWidgetButton-button-badge-backgroundBadge-badge"]'
+      );
+      //
+      if (element && button) {
         num++;
         element.style.width = "100%";
+        button.click();
       }
     }
   }
