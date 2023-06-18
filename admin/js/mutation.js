@@ -73,8 +73,8 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         var lastButton = buttons[buttons.length - 1];
         if (lastButton) lastButton.style.visibility = "hidden";
         console.log("extracted", lastButton);
-        isVisible = false;
       }
+      isVisible = false;
     }
 
     if (isVisible) {
