@@ -38,7 +38,9 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
-        button.click();
+        setTimeout(() => {
+          button.click();
+        }, 1000);
       }
     }
   }
