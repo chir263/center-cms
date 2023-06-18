@@ -147,7 +147,7 @@ let CMS_CONFIG = {
 
       files: [
         {
-          name: "simulation-upload-images",
+          name: ".simulation-upload-images",
           label: "View/Upload Simulation Images",
           file: "experiment/simulation/images/simulation-upload-images.md",
           fields: [
