@@ -58,6 +58,9 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
   var isVisible = true;
   for (let name of nonSimulation) {
     if (window.location.href.endsWith(name)) {
+      var ReactModalPortal = document.querySelector("div.ReactModalPortal");
+      if (ReactModalPortal) {
+      }
       const clickEvent = new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
