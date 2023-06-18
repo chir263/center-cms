@@ -60,19 +60,13 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
       if (ReactModalPortal) {
-        const clickEvent = new MouseEvent("click", {
-          bubbles: true,
-          cancelable: true,
-        });
-        const element = document.elementFromPoint(2, 2);
-        element.dispatchEvent(clickEvent);
-        setTimeout(() => {
-          element.dispatchEvent(clickEvent);
-        }, 200);
-        setTimeout(() => {
-          element.dispatchEvent(clickEvent);
-        }, 400);
       }
+      const clickEvent = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      const element = document.elementFromPoint(2, 2);
+      element.dispatchEvent(clickEvent);
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
