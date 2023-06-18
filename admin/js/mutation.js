@@ -69,15 +69,15 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       }
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
-        const lastButton = buttons[buttons.length - 1];
-        lastButton.style.display = "none";
+        var lastButton = buttons[buttons.length - 1];
+        if (lastButton) lastButton.style.display = "none";
       }
       // AppHeaderButton
     } else {
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
-        const lastButton = buttons[buttons.length - 1];
-        lastButton.style.display = "block";
+        var lastButton = buttons[buttons.length - 1];
+        if (lastButton) lastButton.style.display = "inline";
       }
     }
   }
