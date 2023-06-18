@@ -46,10 +46,6 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
         button.click();
-        var ReactModalPortal = document.querySelector("div.ReactModalPortal");
-        if (ReactModalPortal) {
-          // ReactModalPortal.style.display = "block";
-        }
         let modal = document.querySelector('[class*="StyledModal"]');
         if (modal) {
           modal.style.width = "100%";
@@ -64,24 +60,27 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
       if (ReactModalPortal) {
-        // ReactModalPortal.innerHTML = "";
-        // ReactModalPortal.click();
         const clickEvent = new MouseEvent("click", {
-          bubbles: true, // Allow the event to bubble up the DOM tree
-          cancelable: true, // Allow the event to be canceled
+          bubbles: true,
+          cancelable: true,
         });
-
-        // Get the element at the specified screen coordinates
-        const element = document.elementFromPoint(10, 10);
-
-        // Dispatch the click event on the element
+        const element = document.elementFromPoint(2, 2);
         element.dispatchEvent(clickEvent);
+      }
+      let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
+      if (element) {
+        const lastButton = buttons[buttons.length - 1];
+        lastButton.style.display = "none";
+      }
+      // AppHeaderButton
+    } else {
+      let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
+      if (element) {
+        const lastButton = buttons[buttons.length - 1];
+        lastButton.style.display = "block";
       }
     }
   }
-  // if (num === simulation.length) {
-  //   observer1.disconnect();
-  // }
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
 
