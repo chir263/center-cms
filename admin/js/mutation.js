@@ -71,6 +71,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       console.log(buttons);
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
+        console.log("extracted", lastButton);
         if (lastButton) lastButton.style.opacity = "0";
       }
     } else {
