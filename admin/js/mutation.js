@@ -55,7 +55,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       }
     }
   }
-
+  var isVisible = true;
   for (let name of nonSimulation) {
     if (window.location.href.endsWith(name)) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
@@ -73,13 +73,13 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         var lastButton = buttons[buttons.length - 1];
         if (lastButton) lastButton.style.visibility = "hidden";
         console.log("extracted", lastButton);
+        isVisible = false;
       }
-    } else {
-      let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
-      if (buttons) {
-        var lastButton = buttons[buttons.length - 1];
-        if (lastButton) lastButton.style.visibility = "visible";
-      }
+    }
+
+    if (isVisible) {
+      var lastButton = buttons[buttons.length - 1];
+      if (lastButton) lastButton.style.visibility = "visible";
     }
   }
 });
