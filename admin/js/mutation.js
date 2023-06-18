@@ -39,7 +39,6 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         '[class*="FileWidgetButton-button-badge-backgroundBadge-badge"]'
       );
       let header = document.querySelector('[class*="ToolbarContainer"]');
-      let menu = document.querySelector('[role*="menu"]');
       //
       if (element && button) {
         num++;
@@ -47,6 +46,8 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         header.style.zIndex = 99999 + 1;
         if (!arr[name]) {
           button.click();
+          let modal = document.querySelector('[class*="StyledModal"]');
+          if (modal) modal.style.width = "100%";
           arr[name] = 1;
         }
       }
