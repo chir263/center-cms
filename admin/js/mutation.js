@@ -52,7 +52,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         num++;
         element.style.width = "100%";
         button.click();
-        header.style.zIndex = 10000;
+        header.style.zIndex = 99999 + 1;
       }
     }
   }
