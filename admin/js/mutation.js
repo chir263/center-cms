@@ -17,14 +17,20 @@ var observer = new MutationObserver(function (mutationsList, observer) {
   }
 });
 observer.observe(targetNode, { childList: true, subtree: true });
+let simulation = [
+  "simulation-upload",
+  "simulation-upload-css",
+  "simulation-upload-js",
+  "simulation-upload-images",
+];
+let arr = {
+  "simulation-upload": 0,
+  "simulation-upload-css": 0,
+  "simulation-upload-js": 0,
+  "simulation-upload-images": 0,
+};
 
 var observer1 = new MutationObserver(function (mutationsList, observer) {
-  let simulation = [
-    "simulation-upload",
-    "simulation-upload-css",
-    "simulation-upload-js",
-    "simulation-upload-images",
-  ];
   let num = 0;
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
@@ -39,10 +45,14 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
-        setTimeout(() => {
+        if (!arr[name]) {
           button.click();
-          if (menu) menu.style.zIndex = 99999 + 10;
-        }, 1000);
+          arr[name] = 1;
+        }
+        // setTimeout(() => {
+        //   button.click();
+        //   if (menu) menu.style.zIndex = 99999 + 10;
+        // }, 1000);
       }
     }
   }
