@@ -81,7 +81,7 @@ let CMS_CONFIG = {
       files: [
         {
           name: "simulation-upload",
-          label: "Upload Simulation",
+          label: "View/Upload Simulation",
           file: "experiment/simulation/simulation-upload.md",
           fields: [
             {
@@ -103,7 +103,7 @@ let CMS_CONFIG = {
       files: [
         {
           name: "simulation-upload-css",
-          label: "Upload Simulation CSS",
+          label: "View/Upload Simulation CSS",
           file: "experiment/simulation/css/simulation-upload-css.md",
           fields: [
             {
@@ -125,7 +125,7 @@ let CMS_CONFIG = {
       files: [
         {
           name: "simulation-upload-js",
-          label: "Upload Simulation JS",
+          label: "View/Upload Simulation JS",
           file: "experiment/simulation/js/simulation-upload-js.md",
           fields: [
             {
@@ -147,7 +147,7 @@ let CMS_CONFIG = {
       files: [
         {
           name: "simulation-upload-images",
-          label: "Upload Simulation Images",
+          label: "View/Upload Simulation Images",
           file: "experiment/simulation/images/simulation-upload-images.md",
           fields: [
             {
