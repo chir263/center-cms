@@ -40,12 +40,14 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       );
       let header = document.querySelector('[class*="ToolbarContainer"]');
       let menu = document.querySelector('[role*="menu"]');
+      let CloseButton = document.querySelector('[class*="CloseButton-button"]');
       //
       if (element && button) {
         num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
         if (!arr[name]) {
+          CloseButton.remove();
           button.click();
           arr[name] = 1;
         }
