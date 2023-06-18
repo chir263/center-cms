@@ -1,4 +1,18 @@
 let targetNode = document.body;
+
+let simulation = [
+  "simulation-upload",
+  "simulation-upload-css",
+  "simulation-upload-js",
+  "simulation-upload-images",
+];
+let nonSimulation = [
+  "simulation",
+  "simulation-css",
+  "simulation-js",
+  "simulation-images",
+];
+
 var observer = new MutationObserver(function (mutationsList, observer) {
   var parentDiv = document.querySelector('[class*="AppHeaderContent"]');
   if (parentDiv) {
@@ -17,21 +31,8 @@ var observer = new MutationObserver(function (mutationsList, observer) {
   }
 });
 observer.observe(targetNode, { childList: true, subtree: true });
-let simulation = [
-  "simulation-upload",
-  "simulation-upload-css",
-  "simulation-upload-js",
-  "simulation-upload-images",
-];
-let nonSimulation = [
-  "simulation",
-  "simulation-css",
-  "simulation-js",
-  "simulation-images",
-];
 
 var observer1 = new MutationObserver(function (mutationsList, observer) {
-  let num = 0;
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
