@@ -43,7 +43,6 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       let menu = document.querySelector('[role*="menu"]');
       //
       if (element && button && !menu) {
-        num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
         button.click();
