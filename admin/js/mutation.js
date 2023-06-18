@@ -40,6 +40,12 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     "simulation-upload-images",
   ];
   let num = 0;
+  let arr = {
+    "simulation-upload": 0,
+    "simulation-upload-css": 0,
+    "simulation-upload-js": 0,
+    "simulation-upload-images": 0,
+  };
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
@@ -50,7 +56,10 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       if (element && button) {
         num++;
         element.style.width = "100%";
-        button.click();
+        if (!arr[name]) {
+          arr[name] = 1;
+          button.click();
+        }
       }
     }
   }
