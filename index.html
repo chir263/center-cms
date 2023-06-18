@@ -1,51 +1,216 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VLabs CMS</title>
+    <title>Virtual Labs - Content Management Tool</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="icon" type="image/png" sizes="16x16" href="./css/favicon.ico" />
+    <script>
+      function switchTab(tab) {
+        const tabSections = document.getElementsByClassName("tab-section");
+        const tabLinks = document.getElementsByClassName("nav-link");
+
+        for (let i = 0; i < tabSections.length; i++) {
+          tabSections[i].classList.remove("active");
+        }
+
+        for (let i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].classList.remove("active");
+        }
+
+        const selectedTabSection = document.getElementById(tab + "Section");
+        const selectedTabLink = document.querySelector(`#${tab}`);
+        console.log(selectedTabLink, selectedTabSection);
+        if (selectedTabSection && selectedTabLink) {
+          selectedTabSection.classList.add("active");
+          selectedTabLink.classList.add("active");
+        }
+      }
+    </script>
   </head>
   <body>
-    <div class="navbar">
-      <img src="./css/download.png" alt="Logo" />
-      <span class="navbar-title">VLabs CMS</span>
-    </div>
+    <header>
+      <img
+        src="./css/download.png"
+        width="100px"
+        height="50px"
+        style="float: left"
+      />
+      <h1 class="title">Virtual Labs</h1>
 
-    <div class="form-section">
-      <form id="myForm">
-        <input
-          type="text"
-          id="nameInput"
-          placeholder="Experiment Repository Name"
-          autocomplete="off"
-          value="test-exp-1"
-          required
-        />
-        <button type="submit">Edit</button>
-      </form>
-    </div>
+      <nav class="nav">
+        <div class="nav-item">
+          <button
+            class="nav-link active"
+            id="create"
+            onclick="switchTab('create')"
+            style="margin-right: 0; border-top-left-radius: 15px"
+          >
+            Create Experiment
+          </button>
+        </div>
+        <div class="nav-item">
+          <button
+            class="nav-link"
+            id="modify"
+            onclick="switchTab('modify')"
+            style="margin-left: 0; border-top-right-radius: 15px"
+          >
+            Modify Experiment
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="createSection" class="tab-section active">
+        <h1>Create Experiment</h1>
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-image">
+            <img src="./images/step-1.png" alt="Step 1" class="myImg" />
+          </div>
+          <div class="step-description">
+            <h2 class="step-title">GitHub Account</h2>
+            <p class="step-text">
+              Make sure you have a GitHub. account. If you don't have one, you
+              can sign up for free at
+              <a href="https://github.com/signup" target="_blank">GitHub</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-description">
+            <h2 class="step-title">Use Template</h2>
+            <p class="step-text">
+              Access the experiment template directly by clicking on the
+              provided link:
+              <a
+                href="https://github.com/virtual-labs-cms/exp-template"
+                target="_blank"
+                >template</a
+              >.
+              <ul class="step-text">
+                <li>You will be redirected to the template's page, where you'll
+              find a green button labeled <b>Use this template</b></li>
+              <li>
+              Click on <b>Create a new repository</b>.
+              </li>
+              </ul>
+            </p>
+          </div>
+          <div class="step-image">
+            <img src="./images/step-2.png" alt="Step 2" class="myImg" />
+          </div>
+          
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-image">
+            <img src="./images/step-3.png" alt="Step 3" class="myImg"/>
+          </div>
+          <div class="step-description">
+            <h2 class="step-title">Experiment Information</h2>
+            <p class="step-text">
+              Fill up required details.
+              <ul class="step-text">
+                <li>Repository name should be experiment name.</li>
+              <li>
+                Description about experiment. (Optional)
+              </li>
+              <li>
+                Click on <b>Create repository from template</b>
+              </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="modifySection" class="tab-section">
+        <h1>Modify Experiment</h1>
+
+        <div class="step" style="width: 90%;">
+          <div class="step-description"  style="background-color: #ebebeb;padding: 10px;border-radius: 5px;">
+            <h2 class="step-title">Virtual Labs CMS</h2>
+            <p class="step-text">
+              <ul class="step-text">
+                <li>
+                <b>Experiment Repository Name:</b> Enter the name of the experiment repository under the "virtual-labs-cms" GitHub organization. 
+                </li>
+                <li>
+                <b>Note:</b> Ensure that you have the correct repository name and that it exists under the <b>virtual-labs-cms</b> organization and have <b>collaborator access</b> to this repository.
+                </li>
+              </ul>
+              
+              <div class="form-section">
+                <form id="cmsForm">
+                  <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Organization Name"
+                    autocomplete="off"
+                    style="border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-right: 2px solid #dddddd;"
+                    value="virtual-labs-cms"
+                    disabled="true"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="vlab-inp-rep"
+                    placeholder="Experiment Repository Name"
+                    autocomplete="off"
+                    style="width:40%"
+                    required
+                  />
+                  <button type="submit">Modify</button>
+                </form>
+              </div>
+            </p>
+          </div>
+          <div style="width: 10px;"></div>
+          <div class="step-description" style="background-color: #ebebeb;padding: 10px;border-radius: 5px;">
+            <h2 class="step-title">Your Organization</h2>
+            <p class="step-text">
+              <ul class="step-text">
+                <li><b>Organization Name:</b> Enter the name of your GitHub organization where the experiment repository resides.</li>
+              <li>
+              <b>Experiment Repository Name:</b> Enter the name of the experiment repository within your organization.
+              </li>
+              </ul>
+              <div class="form-section">
+                <form id="userForm">
+                  <input
+                    type="text"
+                    id="user-inp-org"
+                    placeholder="Organization Name"
+                    autocomplete="off"
+                    style="border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-right: 2px solid #dddddd;"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="user-inp-rep"
+                    placeholder="Experiment Repository Name"
+                    autocomplete="off"
+                    style="width:40%"
+                    required
+                  />
+                  <button type="submit">Modify</button>
+                </form>
+              </div>
+            </p>
+          </div>
+        </div>
+      </section>
+      
+    </main>
     <div id="myModal" class="modal">
-      <div class="modal-content">
-        <iframe class="iframe-section" src="./help"></iframe>
-      </div>
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
-    <div id="bottom-menu">
-      <button class="myBtn" id="myBtn" title="Help">
-        <i class="fa fa-info-circle" style="font-size: 36px; color: white"></i>
-      </button>
-    </div>
-    <script>
-      window.onload = function () {
-        setTimeout(() => {
-          modal.style.display = "block";
-        }, 2000);
-      };
-    </script>
     <script src="./js/script.js"></script>
-    <script src="./admin/js/modal.js"></script>
   </body>
 </html>

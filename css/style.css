@@ -1,47 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    padding-top: 10vh;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #efefef;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    height: 80%;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
+/* General styles */
 ::-webkit-scrollbar {
     width: 4px;
     height: 3px;
@@ -54,45 +11,243 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #eaeced;
+    background: #7d8081;
 
     &:hover {
-        background: #d5e0f3;
+        background: #acadad;
     }
 }
 
-.navbar {
-    background-color: #f0f0f2;
+nav {
+    font-size: 0;
+}
+
+nav>div {
+    display: inline-block;
+    font-size: 16px;
+    /* Set your desired font size for the div elements */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 192, 169);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+/* Navigation bar styles */
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 9999;
+    background-color: #f5f5f5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 100;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar img {
-    height: 40px;
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7d8081;
+    position: absolute;
+    margin-left: 120px;
+}
+
+.nav {
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 0;
+}
+
+.nav-link {
+    background-color: #9c9c9c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    background-color: #969595;
+}
+
+.nav-link.active {
+    background-color: #00b7a5;
+}
+
+.nav-link.active:hover {
+    background-color: #259b97;
+}
+
+/* Content styles */
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #259b97;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #207a7a;
+}
+
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+a {
+    color: #00cec0;
+}
+
+#createSection {
+    text-align: center;
+}
+
+#modifySection {
+    text-align: center;
+}
+
+#createSection>div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#modifySection>div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f4f4f4;
+}
+
+.step {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+    cursor: default;
+}
+
+.step:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-image {
+    flex: 0 0 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.step-image:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    /* border: 2px solid #aaa; */
+    border-radius: 10px;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.step-description {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
     margin-right: 10px;
 }
 
-.navbar-title {
-    font-size: 20px;
-}
-
 .form-section {
-    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #00c6bc;
-    padding-top: 30px;
+    background-color: transparent;
 }
 
 .form-section form {
@@ -109,14 +264,14 @@ body {
     padding: 10px;
     margin-right: 0;
     border: none;
-    background-color: #e4e4e5;
+    background-color: white;
     color: #3f3f3f;
     transition: background-color 0.3s ease;
-    width: 500px;
+    width: 30%;
     font-size: 18px;
     flex-grow: 1;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
     border-right: none;
 }
 
@@ -151,46 +306,112 @@ body {
     background-color: #076760;
 }
 
-.iframe-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: calc(100vh - 20vh);
-    border: none;
-}
 
-@media screen and (max-width: 768px) {
-    .form-section {
-        margin-top: 60px;
-        flex-direction: column;
-    }
-
-    .form-section input[type="text"],
-    .form-section button[type="submit"] {
-        width: 100%;
-        margin-right: 0;
-    }
-}
-
-#bottom-menu {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-}
-
-.myBtn {
-
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #b2b7c5;
-    color: white;
+.step-image {
+    border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
+    transition: 0.3s;
 }
 
-.myBtn:hover {
-    background-color: #555;
+.step-image:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+    overflow: hidden;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    /* max-width: 700px; */
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
 }
