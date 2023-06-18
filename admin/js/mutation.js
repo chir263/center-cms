@@ -41,7 +41,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         header.style.zIndex = 99999 + 1;
         setTimeout(() => {
           button.click();
-          menu?.style.zIndex = 99999 + 10;
+          if (menu) menu.style.zIndex = 99999 + 10;
         }, 1000);
       }
     }
