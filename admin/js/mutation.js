@@ -65,6 +65,17 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
       if (ReactModalPortal) {
         // ReactModalPortal.innerHTML = "";
+        // ReactModalPortal.click();
+        const clickEvent = new MouseEvent("click", {
+          bubbles: true, // Allow the event to bubble up the DOM tree
+          cancelable: true, // Allow the event to be canceled
+        });
+
+        // Get the element at the specified screen coordinates
+        const element = document.elementFromPoint(10, 10);
+
+        // Dispatch the click event on the element
+        element.dispatchEvent(clickEvent);
       }
     }
   }
