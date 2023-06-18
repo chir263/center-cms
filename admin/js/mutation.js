@@ -40,7 +40,6 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       );
       let header = document.querySelector('[class*="ToolbarContainer"]');
       let menu = document.querySelector('[role*="menu"]');
-      let CloseButton = document.querySelector('[class*="CloseButton-button"]');
       //
       if (element && button) {
         num++;
@@ -48,7 +47,6 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         header.style.zIndex = 99999 + 1;
         if (!arr[name]) {
           button.click();
-          if (CloseButton) CloseButton.remove();
           arr[name] = 1;
         }
       }
@@ -59,3 +57,9 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
   }
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
+
+var observer2 = new MutationObserver(function (mutationsList, observer) {
+  let CloseButton = document.querySelector('[class*="CloseButton-button"]');
+  if (CloseButton) CloseButton.remove();
+});
+observer2.observe(targetNode, { childList: true, subtree: true });
