@@ -85,18 +85,10 @@ let CMS_CONFIG = {
           file: "experiment/simulation/simulation-upload.md",
           fields: [
             {
-              // name: "file",
-              // label: "File",
-              // widget: "list",
-              // preview_disabled: true,
-              // fields: [
-              //   {
               name: "file",
               label: "File",
               widget: "file",
               required: false,
-              //   },
-              // ],
             },
           ],
         },
@@ -117,15 +109,8 @@ let CMS_CONFIG = {
             {
               name: "file",
               label: "File",
-              widget: "list",
-              fields: [
-                {
-                  name: "file",
-                  label: "File",
-                  widget: "file",
-                  required: false,
-                },
-              ],
+              widget: "file",
+              required: false,
             },
           ],
         },
@@ -146,15 +131,8 @@ let CMS_CONFIG = {
             {
               name: "file",
               label: "File",
-              widget: "list",
-              fields: [
-                {
-                  name: "file",
-                  label: "File",
-                  widget: "file",
-                  required: false,
-                },
-              ],
+              widget: "file",
+              required: false,
             },
           ],
         },
@@ -175,15 +153,8 @@ let CMS_CONFIG = {
             {
               name: "file",
               label: "File",
-              widget: "list",
-              fields: [
-                {
-                  name: "file",
-                  label: "File",
-                  widget: "file",
-                  required: false,
-                },
-              ],
+              widget: "file",
+              required: false,
             },
           ],
         },
