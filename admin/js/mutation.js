@@ -39,13 +39,14 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         '[class*="FileWidgetButton-button-badge-backgroundBadge-badge"]'
       );
       let header = document.querySelector('[class*="ToolbarContainer"]');
+      let menu = document.querySelector('[class*="ToolbarContainer"]');
       //
       if (element && button) {
         num++;
         element.style.width = "100%";
         header.style.zIndex = 99999 + 1;
         if (1) {
-          button.click();
+          // button.click();
           let modal = document.querySelector('[class*="StyledModal"]');
           if (modal) {
             modal.style.width = "100%";
