@@ -66,13 +66,17 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         });
         const element = document.elementFromPoint(2, 2);
         element.dispatchEvent(clickEvent);
+        setTimeout(() => {
+          element.dispatchEvent(clickEvent);
+        }, 200);
+        setTimeout(() => {
+          element.dispatchEvent(clickEvent);
+        }, 400);
       }
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
-      console.log(buttons);
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
         if (lastButton) lastButton.style.visibility = "hidden";
-        console.log("extracted", lastButton);
       }
       isVisible = false;
     }
