@@ -15,6 +15,20 @@ var observer = new MutationObserver(function (mutationsList, observer) {
       parentDiv.appendChild(newDiv);
     }
   }
+
+  let simulation = [
+    "simulation-upload",
+    "simulation-upload-css",
+    "simulation-upload-js",
+    "simulation-upload-images",
+  ];
+
+  for (let name of simulation) {
+    if (window.location.href.endsWith(name)) {
+      element = document.querySelector('[class*="Pane vertical Pane1  "]');
+      element?.style.width = "100%";
+    }
+  }
 });
 observer.observe(targetNode, { childList: true, subtree: true });
 
@@ -36,7 +50,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       //
       if (element && button) {
         num++;
-        header?.style.zIndex = 99999 + 10;
+        header.style.zIndex = 99999 + 10;
         element?.style.width = "100%";
         // button.click();
       }
