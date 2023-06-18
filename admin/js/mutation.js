@@ -48,7 +48,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         button.click();
         var ReactModalPortal = document.querySelector("div.ReactModalPortal");
         if (ReactModalPortal) {
-          ReactModalPortal.style.display = "block";
+          // ReactModalPortal.style.display = "block";
         }
         let modal = document.querySelector('[class*="StyledModal"]');
         if (modal) {
