@@ -50,7 +50,8 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
           var ReactModalPortal = document.querySelector("div.ReactModalPortal");
 
           // Get the first <div> element within the parentDiv
-          var firstDiv = parentDiv.querySelector("div");
+          var firstDiv = ReactModalPortal.querySelector("div");
+
           firstDiv.style.zIndex = 1;
           let modal = document.querySelector('[class*="StyledModal"]');
           if (modal) {
