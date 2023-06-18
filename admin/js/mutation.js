@@ -64,7 +64,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var ReactModalPortal = document.querySelector("div.ReactModalPortal");
       if (ReactModalPortal) {
-        ReactModalPortal.style.display = "none";
+        // ReactModalPortal.style.display = "none";
       }
     }
   }
