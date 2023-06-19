@@ -58,15 +58,17 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
   var isVisible = true;
   for (let name of nonSimulation) {
     if (window.location.href.endsWith(name)) {
-      var ReactModalPortal = document.querySelector("div.ReactModalPortal");
-      if (ReactModalPortal) {
-      }
+      var Modal = document.querySelector('[class*="StyledModal"]');
+      // StyledModal
       const clickEvent = new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
       });
       const element = document.elementFromPoint(2, 2);
-      element.dispatchEvent(clickEvent);
+      while (Modal) {
+        element.dispatchEvent(clickEvent);
+        Modal = document.querySelector('[class*="StyledModal"]');
+      }
       console.log("clicked");
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
