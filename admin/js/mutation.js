@@ -67,6 +67,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       });
       const element = document.elementFromPoint(2, 2);
       element.dispatchEvent(clickEvent);
+      console.log("clicked");
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
