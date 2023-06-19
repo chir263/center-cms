@@ -60,8 +60,8 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var Modal = document.querySelector('[class*="StyledModal"]');
       // StyledModal
-
-      let counts = setInterval(updated, 200);
+      let counts;
+      if (Modal) counts = setInterval(updated, 200);
       let upto = 0;
       function updated() {
         ++upto;
