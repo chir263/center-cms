@@ -67,9 +67,10 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
       const element = document.elementFromPoint(2, 2);
       while (Modal) {
         element.dispatchEvent(clickEvent);
+        console.log("clicked");
+
         Modal = document.querySelector('[class*="StyledModal"]');
       }
-      console.log("clicked");
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
