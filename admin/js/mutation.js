@@ -60,19 +60,20 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     if (window.location.href.endsWith(name)) {
       var Modal = document.querySelector('[class*="StyledModal"]');
       // StyledModal
-      const clickEvent = new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      });
-      const element = document.elementFromPoint(2, 2);
+
       let counts = setInterval(updated, 200);
       let upto = 0;
       function updated() {
         ++upto;
+        const clickEvent = new MouseEvent("click", {
+          bubbles: true,
+          cancelable: true,
+        });
+        const element = document.elementFromPoint(2, 2);
         element.dispatchEvent(clickEvent);
         Modal = document.querySelector('[class*="StyledModal"]');
         console.log("clicked");
-        if (upto === 5 || !Modal) {
+        if (!Modal || upto === 20) {
           clearInterval(counts);
         }
       }
