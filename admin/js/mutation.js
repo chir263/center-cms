@@ -65,11 +65,16 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         cancelable: true,
       });
       const element = document.elementFromPoint(2, 2);
+      var cnt = 0;
       while (Modal) {
-        element.dispatchEvent(clickEvent);
-        console.log("clicked");
-
-        Modal = document.querySelector('[class*="StyledModal"]');
+        setTimeout(() => {
+          if (cnt <= 5) {
+            element.dispatchEvent(clickEvent);
+            console.log("clicked");
+            Modal = document.querySelector('[class*="StyledModal"]');
+            cnt++;
+          }
+        }, 200);
       }
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
