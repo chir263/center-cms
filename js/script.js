@@ -21,8 +21,8 @@ document
   .getElementById("userForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    var org_name = document.getElementById("user-inp-org").value;
-    var exp_name = document.getElementById("user-inp-rep").value;
+    var org_name = document.getElementById("user-inp-org").value.trim();
+    var exp_name = document.getElementById("user-inp-rep").value.trim();
     var para = new URLSearchParams();
     para.append("EXPERIMENT", exp_name);
     para.append("ORGANISATION_NAME", org_name);
@@ -32,7 +32,7 @@ document
 // vlab-cms organisation form
 document.getElementById("cmsForm").addEventListener("submit", function (event) {
   event.preventDefault();
-  var name = document.getElementById("vlab-inp-rep").value;
+  var name = document.getElementById("vlab-inp-rep").value.trim();
   var para = new URLSearchParams();
   para.append("EXPERIMENT", name);
   para.append("ORGANISATION_NAME", "virtual-labs-cms");
