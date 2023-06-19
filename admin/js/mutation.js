@@ -65,17 +65,27 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         cancelable: true,
       });
       const element = document.elementFromPoint(2, 2);
-      var cnt = 0;
-      while (Modal) {
-        setTimeout(() => {
-          if (cnt <= 5) {
-            element.dispatchEvent(clickEvent);
-            console.log("clicked");
-            Modal = document.querySelector('[class*="StyledModal"]');
-            cnt++;
-          }
-        }, 200);
+      // var cnt = 0;
+      // while (Modal) {
+      //   setTimeout(() => {
+      //     if (cnt <= 5) {
+      //       console.log("clicked");
+      //       Modal = document.querySelector('[class*="StyledModal"]');
+      //       cnt++;
+      //     }
+      //   }, 200);
+      // }
+      let counts = setInterval(updated, 200);
+      let upto = 0;
+      function updated() {
+        ++upto;
+        element.dispatchEvent(clickEvent);
+
+        if (upto === 5) {
+          clearInterval(counts);
+        }
       }
+
       let buttons = document.querySelectorAll('[class*="AppHeaderButton"]');
       if (buttons) {
         var lastButton = buttons[buttons.length - 1];
