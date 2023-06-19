@@ -72,7 +72,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
         const element = document.elementFromPoint(2, 2);
         element.dispatchEvent(clickEvent);
         Modal = document.querySelector('[class*="StyledModal"]');
-        console.log("clicked");
+        // console.log("clicked");
         if (!Modal || upto === 20) {
           clearInterval(counts);
         }
