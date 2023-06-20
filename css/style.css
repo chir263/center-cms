@@ -62,6 +62,13 @@ header {
     margin-left: 120px;
 }
 
+#user {
+    float: right;
+    position: absolute;
+    /* right: 90px; */
+    color: black;
+}
+
 .nav {
     margin-top: 20px;
     position: absolute;
