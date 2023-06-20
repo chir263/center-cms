@@ -18,6 +18,7 @@ let CMS_CONFIG = {
     },
   },
   media_folder: "experiment/images",
+  public_folder: "images",
 
   collections: [
     {
