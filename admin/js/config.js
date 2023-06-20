@@ -167,3 +167,10 @@ let CMS_CONFIG = {
 function back_to_home() {
   window.location.href = `/`;
 }
+
+function open_deploy() {
+  window.open(
+    `https://${ORGANISATION_NAME}.github.io/${EXPERIMENT}/index.html`,
+    "_blank"
+  );
+}
