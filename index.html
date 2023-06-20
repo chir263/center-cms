@@ -40,8 +40,15 @@
         height="50px"
         style="float: left"
       />
-      <h1 class="title">Virtual Labs</h1>
-
+      <h1 class="title">Content Management Tool</h1>
+      <h1 id="user" style="float: right;position: absolute;right: 90px;color: black;"></h1>
+      <script>
+        let user_name =
+      JSON.parse(localStorage.getItem("netlify-cms-user"))?.login ;
+        if (user_name){
+          document.getElementById('user').innerHTML = `Hi ${user_name}`;
+        }
+      </script>
       <nav class="nav">
         <div class="nav-item">
           <button
