@@ -88,6 +88,7 @@ let CMS_CONFIG = {
               name: "file",
               label: "File",
               widget: "file",
+              media_library: { config: { multiple: true } },
               required: false,
             },
           ],
