@@ -66,6 +66,7 @@ header {
     float: right;
     position: absolute;
     /* right: 90px; */
+    margin-left: auto;
     color: black;
 }
 
