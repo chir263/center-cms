@@ -230,6 +230,7 @@ h1 {
 
 .step-description {
     flex: 1;
+    align-self: flex-start;
 }
 
 .step-title {
