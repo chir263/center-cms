@@ -91,6 +91,30 @@
           </div>
         </div>
 
+
+        <div class="step">
+          <div class="step-description" style="padding-right: 10px;">
+            <h2 class="step-title">Creating Experiment in Virtual Labs</h2>
+            <p class="step-text">
+              Follow the instructions in the engineers forum repository to create an experiment in Virtual Labs:
+              <a
+                href="https://github.com/virtual-labs-cms/engineers-forum"
+                target="_blank"
+                >Engineers forum</a
+              >.
+              
+            </p>
+          </div>
+          
+          <div class="step-description">
+            <h2 class="step-title">Creating Experiment in your organization</h2>
+            <p class="step-text">
+              Create an experiment within your organization by following the steps outlined below.
+              
+            </p>
+          </div>
+        </div>
+
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-description">
@@ -106,6 +130,7 @@
               <ul class="step-text">
                 <li>You will be redirected to the template's page, where you'll
               find a green button labeled <b>Use this template</b></li>
+              
               <li>
               Click on <b>Create a new repository</b>.
               </li>
@@ -128,12 +153,19 @@
             <p class="step-text">
               Fill up required details.
               <ul class="step-text">
-                <li>Repository name should be experiment name.</li>
+                <li>Repository name should be experiment name. </li>
+                  <li>Name format <b>exp-&lt;expName&gt;-&lt;devInstituteName&gt;</b> e.g. exp-geometry-optimization-molecules-iiith</li>
               <li>
                 Description about experiment. (Optional)
               </li>
               <li>
+              Must select <b>Include all branches</b>.
+              </li>
+              <li>
                 Click on <b>Create repository from template</b>
+              </li>
+              <li>
+               <a href="#secret">Steup Secret Token.</a>
               </li>
               </ul>
             </p>
@@ -150,6 +182,73 @@
           </div>
           <div class="step-image">
             <img src="./images/step-5.png" alt="Modifying Experiments" class="myImg"/>
+          </div>
+        </div>
+
+
+        <h1  id="secret" style="padding-top: 100px;" >Setup Secret Token</h1>
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-image">
+            <img src="./images/sec-1.png" alt="Creating a GitHub Account" class="myImg" />
+          </div>
+          <div class="step-description">
+            <h2 class="step-title">Setting up new secret</h2>
+            <p class="step-text">
+              <ul>
+                <li>Go to repository page <b>Setting</b> > <b>Secrets and variables</b> > <b>Actions</b>.</li>
+                <li>Click on <b>New repository secret</b>.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-description">
+            <h2 class="step-title">Creating new Secret</h2>
+            <p class="step-text">
+              <ul>
+                <li>Enter <b>secret name</b> as `ORG_OWNER_GITHUB_TOKEN`.</li>
+                <li>Create <a href="https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">Personal Access Token</a>.</li>
+                <li>Paste that token into <b>Secret</b>.</li>
+                <li>Click on  <b>Add secret</b>.</li>
+              
+              </ul>
+            </p>
+          </div>
+          <div class="step-image">
+            <img src="./images/sec-2.png" alt="Using Experiment GitHub Template" class="myImg" />
+          </div>
+          
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-image">
+            <img src="./images/sec-3.png" alt="Completing Git Template and Creating Repository" class="myImg"/>
+          </div>
+          <div class="step-description">
+            <h2 class="step-title">Setting up permissions for workflow</h2>
+            <p class="step-text">
+              <ul>
+                <li>Go to repository page <b>Setting</b> > <b>Actions</b> > <b>General</b>.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+         <div class="step">
+          <div class="step-number">4</div>
+          
+          <div class="step-description">
+            <h2 class="step-title">Giving read and write permissions</h2>
+            <p class="step-text">
+              Select <b>Read and write permissions</b> under <b>Workflow permissions</b> heading.
+            </p>
+          </div>
+          <div class="step-image">
+            <img src="./images/sec-4.png" alt="Modifying Experiments" class="myImg"/>
           </div>
         </div>
       </section>
@@ -235,8 +334,10 @@
           <div class="step-description">
             <h2 class="step-title">Accessing Experiment Editing Page via Authentication</h2>
             <p class="step-text">
-              Fill up required details.
               <ul class="step-text">
+                <li>
+              Fill up required details.
+                </li>
                   <li>Submit the above form.</li>
                   <li>You will be redirected to an authentication page.</li>
                   <li>If you are not already logged in, look for the <b>Login with GitHub</b> option.</li>
