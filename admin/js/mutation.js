@@ -106,7 +106,7 @@ observer2.observe(targetNode, { childList: true, subtree: true });
 var observer3 = new MutationObserver(function (mutationsList, observer) {
   var innerDiv = document
     .querySelector(".notif__container")
-    .querySelector("span div");
+    ?.querySelector("span div");
   console.log(innerDiv);
   if (innerDiv) {
     innerDiv.innerHTML =
