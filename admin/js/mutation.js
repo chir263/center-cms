@@ -103,13 +103,15 @@ var observer2 = new MutationObserver(function (mutationsList, observer) {
 });
 observer2.observe(targetNode, { childList: true, subtree: true });
 
-let targetContainer = document.querySelector(".notif__container");
 var observer3 = new MutationObserver(function (mutationsList, observer) {
-  var innerDiv = targetContainer.querySelector("span div");
+  var innerDiv = document
+    .querySelector(".notif__container")
+    .querySelector("span div");
   console.log(innerDiv);
   if (innerDiv) {
     innerDiv.innerHTML =
       innerDiv.innerHTML + ". Deployment will be updated in few minutes.";
+    observer3.disconnect();
   }
 });
-observer3.observe(targetContainer, { childList: true, subtree: true });
+observer3.observe(targetNode, { childList: true, subtree: true });
