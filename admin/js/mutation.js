@@ -108,9 +108,9 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
 
   // console.log(innerDiv);
   if (innerDiv) {
-    innerDiv.appendChild(
-      "<span>Deployment will be updated in few minutes.</span>"
-    );
+    var spanElement = document.createElement("span");
+    spanElement.textContent = "Deployment will be updated in few minutes.";
+    innerDiv.appendChild(spanElement);
     console.log(document.querySelector(".notif__container"));
     observer3.disconnect();
   }
