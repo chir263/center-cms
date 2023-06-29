@@ -99,6 +99,12 @@ observer1.observe(targetNode, { childList: true, subtree: true });
 
 var observer2 = new MutationObserver(function (mutationsList, observer) {
   let CloseButton = document.querySelector('[class*="CloseButton-button"]');
+  var innerDiv = document.querySelector(".notif__container span div");
+  console.log(innerDiv);
+  if (innerDiv) {
+    innerDiv.innerHTML =
+      innerDiv.innerHTML + ". Deployment will be updated in few minutes.";
+  }
   if (CloseButton) CloseButton.remove();
 });
 observer2.observe(targetNode, { childList: true, subtree: true });
