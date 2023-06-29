@@ -108,3 +108,15 @@ var observer2 = new MutationObserver(function (mutationsList, observer) {
   if (CloseButton) CloseButton.remove();
 });
 observer2.observe(targetNode, { childList: true, subtree: true });
+
+let targetContainer = document.querySelector('[class*="notif__container "]');
+//
+var observer3 = new MutationObserver(function (mutationsList, observer) {
+  var innerDiv = targetContainer.querySelector("span div");
+  console.log(innerDiv);
+  if (innerDiv) {
+    innerDiv.innerHTML =
+      innerDiv.innerHTML + ". Deployment will be updated in few minutes.";
+  }
+});
+observer3.observe(targetContainer, { childList: true, subtree: true });
