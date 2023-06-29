@@ -110,6 +110,7 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
   if (innerDiv) {
     innerDiv.innerHTML =
       innerDiv.innerHTML + ". Deployment will be updated in few minutes.";
+    console.log(document.querySelector(".notif__container"));
     observer3.disconnect();
   }
 });
