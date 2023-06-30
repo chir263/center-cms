@@ -110,7 +110,7 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
     ?.querySelector("div");
 
   // console.log(innerDiv);
-  if (innerDiv) {
+  if (innerDiv && innerDiv.innerHTML == "Entry saved") {
     // var spanElement = document.createElement("span");
     // spanElement.textContent = "Deployment will be updated in few minutes.";
     // innerDiv.appendChild(spanElement);
@@ -118,7 +118,7 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
     innerDiv.innerHTML =
       "Entry Saved. Deployment will be updated in few minutes.";
     console.log(innerDiv.innerHTML);
-    observer3.disconnect();
+    // observer3.disconnect();
   }
 });
 observer3.observe(targetNode, { childList: true, subtree: true });
