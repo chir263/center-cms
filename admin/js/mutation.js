@@ -117,7 +117,7 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
     // console.log(document.querySelector(".notif__container"));
     innerDiv.innerHTML =
       "Entry Saved. Deployment will be updated in few minutes.";
-    console.log(innerDiv.innerHTML);
+    // console.log(innerDiv.innerHTML);
     // observer3.disconnect();
   }
 });
