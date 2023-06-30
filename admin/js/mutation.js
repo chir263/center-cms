@@ -116,7 +116,7 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
     // innerDiv.appendChild(spanElement);
     // console.log(document.querySelector(".notif__container"));
     innerDiv.innerHTML =
-      "Entry Saved.<br/> Deployment will be updated in few minutes.";
+      "Entry Saved.<br/>Deployment will be updated in few minutes.";
     // console.log(innerDiv.innerHTML);
     // observer3.disconnect();
   }
