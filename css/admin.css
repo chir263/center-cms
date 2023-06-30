@@ -47,7 +47,7 @@
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #b2b7c5;
+    background-color: #00caad;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -55,7 +55,7 @@
 }
 
 .myBtn:hover {
-    background-color: #555;
+    background-color: #00b69b;
 }
 
 .user_name {
