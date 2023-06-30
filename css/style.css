@@ -277,6 +277,40 @@ h1 {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+#cmsForm,
+#userForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#cmsForm #nameInput,
+#userForm #user-inp-org {
+    width: 30%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 2px solid #ececec;
+}
+
+#cmsForm #vlab-inp-rep,
+#userForm #user-inp-rep {
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    #cmsForm input[type="text"] {
+        width: 100%;
+    }
+
+    #cmsForm #nameInput {
+        margin-bottom: 10px;
+    }
+
+    #cmsForm button {
+        width: 100%;
+    }
+}
+
 .form-section input[type="text"] {
     padding: 10px;
     margin-right: 0;
@@ -287,8 +321,6 @@ h1 {
     width: 30%;
     font-size: 18px;
     flex-grow: 1;
-    /* border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px; */
     border-right: none;
 }
 
@@ -312,6 +344,7 @@ h1 {
     font-size: 18px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 20%;
 }
 
 .form-section button[type="submit"]:hover {

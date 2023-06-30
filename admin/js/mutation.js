@@ -99,7 +99,10 @@ observer1.observe(targetNode, { childList: true, subtree: true });
 
 var observer2 = new MutationObserver(function (mutationsList, observer) {
   let CloseButton = document.querySelector('[class*="CloseButton-button"]');
-  if (CloseButton) CloseButton.remove();
+  if (CloseButton) {
+    CloseButton.remove();
+    observer2.disconnect();
+  }
 });
 observer2.observe(targetNode, { childList: true, subtree: true });
 
