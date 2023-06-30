@@ -104,15 +104,19 @@ var observer2 = new MutationObserver(function (mutationsList, observer) {
 observer2.observe(targetNode, { childList: true, subtree: true });
 
 var observer3 = new MutationObserver(function (mutationsList, observer) {
-  var innerDiv = document.querySelector(".notif__container");
+  var innerDiv = document
+    .querySelector(".notif__container")
+    ?.querySelector("span")
+    ?.querySelector("div");
 
   // console.log(innerDiv);
   if (innerDiv) {
-    var spanElement = document.createElement("span");
-    spanElement.textContent = "Deployment will be updated in few minutes.";
-    innerDiv.appendChild(spanElement);
-    console.log(document.querySelector(".notif__container"));
-    observer3.disconnect();
+    // var spanElement = document.createElement("span");
+    // spanElement.textContent = "Deployment will be updated in few minutes.";
+    // innerDiv.appendChild(spanElement);
+    // console.log(document.querySelector(".notif__container"));
+    // observer3.disconnect();
+    console.log(innerDiv.innerHTML);
   }
 });
 observer3.observe(targetNode, { childList: true, subtree: true });
