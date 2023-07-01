@@ -101,7 +101,6 @@ var observer2 = new MutationObserver(function (mutationsList, observer) {
   let CloseButton = document.querySelector('[class*="CloseButton-button"]');
   if (CloseButton) {
     CloseButton.remove();
-    observer2.disconnect();
   }
 });
 observer2.observe(targetNode, { childList: true, subtree: true });
@@ -112,16 +111,9 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
     ?.querySelector("span")
     ?.querySelector("div");
 
-  // console.log(innerDiv);
   if (innerDiv && innerDiv.innerHTML == "Entry saved") {
-    // var spanElement = document.createElement("span");
-    // spanElement.textContent = "Deployment will be updated in few minutes.";
-    // innerDiv.appendChild(spanElement);
-    // console.log(document.querySelector(".notif__container"));
     innerDiv.innerHTML =
       "Entry Saved.<br/>Deployment will be updated in few minutes.";
-    // console.log(innerDiv.innerHTML);
-    // observer3.disconnect();
   }
 });
 observer3.observe(targetNode, { childList: true, subtree: true });
