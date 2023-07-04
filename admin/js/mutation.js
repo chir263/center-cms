@@ -6,7 +6,7 @@ let simulation = [
   "simulation-upload-js",
   "simulation-upload-images",
 ];
-let nonSimulation = [
+let prevSimulation = [
   "simulation",
   "simulation-css",
   "simulation-js",
@@ -32,7 +32,10 @@ var observer = new MutationObserver(function (mutationsList, observer) {
 });
 observer.observe(targetNode, { childList: true, subtree: true });
 
-var observer1 = new MutationObserver(function (mutationsList, observer) {
+var simulationObserver = new MutationObserver(function (
+  mutationsList,
+  observer
+) {
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
@@ -56,7 +59,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     }
   }
   var isVisible = true;
-  for (let name of nonSimulation) {
+  for (let name of prevSimulation) {
     if (window.location.href.endsWith(name)) {
       var Modal = document.querySelector('[class*="StyledModal"]');
       // StyledModal
@@ -95,7 +98,7 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
     }
   }
 });
-observer1.observe(targetNode, { childList: true, subtree: true });
+simulationObserver.observe(targetNode, { childList: true, subtree: true });
 
 var removeCloseButtonObserver = new MutationObserver(function (
   mutationsList,
