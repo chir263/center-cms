@@ -97,15 +97,24 @@ var observer1 = new MutationObserver(function (mutationsList, observer) {
 });
 observer1.observe(targetNode, { childList: true, subtree: true });
 
-var observer2 = new MutationObserver(function (mutationsList, observer) {
+var removeCloseButtonObserver = new MutationObserver(function (
+  mutationsList,
+  observer
+) {
   let CloseButton = document.querySelector('[class*="CloseButton-button"]');
   if (CloseButton) {
     CloseButton.remove();
   }
 });
-observer2.observe(targetNode, { childList: true, subtree: true });
+removeCloseButtonObserver.observe(targetNode, {
+  childList: true,
+  subtree: true,
+});
 
-var observer3 = new MutationObserver(function (mutationsList, observer) {
+var successMesssageObserver = new MutationObserver(function (
+  mutationsList,
+  observer
+) {
   var innerDiv = document
     .querySelector(".notif__container")
     ?.querySelector("span")
@@ -116,4 +125,4 @@ var observer3 = new MutationObserver(function (mutationsList, observer) {
       "Entry Saved.<br/>Deployment will be updated in few minutes.";
   }
 });
-observer3.observe(targetNode, { childList: true, subtree: true });
+successMesssageObserver.observe(targetNode, { childList: true, subtree: true });
