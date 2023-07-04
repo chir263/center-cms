@@ -6,7 +6,7 @@ let simulation = [
   "simulation-upload-js",
   "simulation-upload-images",
 ];
-let prevSimulation = [
+let nonSimulation = [
   "simulation",
   "simulation-css",
   "simulation-js",
@@ -32,10 +32,7 @@ var observer = new MutationObserver(function (mutationsList, observer) {
 });
 observer.observe(targetNode, { childList: true, subtree: true });
 
-var simulationObserver = new MutationObserver(function (
-  mutationsList,
-  observer
-) {
+var observer1 = new MutationObserver(function (mutationsList, observer) {
   for (let name of simulation) {
     if (window.location.href.endsWith(name)) {
       let element = document.querySelector('[class*="Pane vertical Pane1  "]');
@@ -59,7 +56,7 @@ var simulationObserver = new MutationObserver(function (
     }
   }
   var isVisible = true;
-  for (let name of prevSimulation) {
+  for (let name of nonSimulation) {
     if (window.location.href.endsWith(name)) {
       var Modal = document.querySelector('[class*="StyledModal"]');
       // StyledModal
@@ -98,26 +95,17 @@ var simulationObserver = new MutationObserver(function (
     }
   }
 });
-simulationObserver.observe(targetNode, { childList: true, subtree: true });
+observer1.observe(targetNode, { childList: true, subtree: true });
 
-var removeCloseButtonObserver = new MutationObserver(function (
-  mutationsList,
-  observer
-) {
+var observer2 = new MutationObserver(function (mutationsList, observer) {
   let CloseButton = document.querySelector('[class*="CloseButton-button"]');
   if (CloseButton) {
     CloseButton.remove();
   }
 });
-removeCloseButtonObserver.observe(targetNode, {
-  childList: true,
-  subtree: true,
-});
+observer2.observe(targetNode, { childList: true, subtree: true });
 
-var successMesssageObserver = new MutationObserver(function (
-  mutationsList,
-  observer
-) {
+var observer3 = new MutationObserver(function (mutationsList, observer) {
   var innerDiv = document
     .querySelector(".notif__container")
     ?.querySelector("span")
@@ -128,4 +116,4 @@ var successMesssageObserver = new MutationObserver(function (
       "Entry Saved.<br/>Deployment will be updated in few minutes.";
   }
 });
-successMesssageObserver.observe(targetNode, { childList: true, subtree: true });
+observer3.observe(targetNode, { childList: true, subtree: true });
