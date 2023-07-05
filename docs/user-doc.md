@@ -37,7 +37,7 @@ To begin using Virtual Labs CMS, follow the instructions below.
 2. In the form, enter the experiment repository name.
 3. Click the "Modify" button.
 4. Authenticate yourself using your GitHub account credentials.
-5. After authentication, you will be able to edit the content of the experiment repository.
+5. After authentication, you will be redirected to content management page.
 
 ## Using the Virtual Labs CMS
 
@@ -55,10 +55,9 @@ The Virtual Labs CMS provides two editors to create experiment components: Markd
 
 To incorporate interactive simulations into your experiments, you can upload simulation files. Please note that only single file uploads are supported. Follow these steps to upload a simulation file:
 
-1. Open the experiment repository you wish to modify.
-2. Locate the simulation file you want to upload on your local system.
-3. Click on the upload button and select the file to be uploaded.
-4. Repeat the process for additional simulation files.
+1. Click on corresponding tab (i.e css, js, images) to upload simulation. Then click on "View/Upload Simulation `CSS/JS/Images`" card
+2. Click on the upload button and select the file to be uploaded.
+3. Repeat the process for additional simulation files.
 
 ## Known Limitations
 
