@@ -19,7 +19,7 @@ let CMS_CONFIG = {
   },
   media_folder: "experiment/images",
   public_folder: "images",
-  logo_url: "https://center-cms.netlify.app/images/download.png",
+  logo_url: "../../images/download.png",
   collections: [
     {
       name: "Experiment",
